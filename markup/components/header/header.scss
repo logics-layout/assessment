@@ -1,0 +1,60 @@
+.header{
+  background-color: #f8f8f8;
+  padding-top: 30px;
+  padding-bottom: 140px;
+  overflow: hidden;
+  background-image: url('%=static=%assets/header/bg.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  //background-size: 100% auto;
+  &__top{
+
+  }
+  &__nav{
+    background-color: #fff;
+    border-radius: 0 0 0 20px;
+    position: relative;
+    padding-left: 25px;
+    &-table{
+      display: table;
+      height: 68px;
+      &-cell{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      left: 100%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+  &__menu{
+    @include nl;
+    font-size: 0;
+    margin: 0 -2.5px;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0 2.5px;
+      a{
+        color: currentColor;
+        display: block;
+        padding: 2.5px 8px;
+      }
+      &.active{
+        a{
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+}

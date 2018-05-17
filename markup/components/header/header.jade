@@ -1,0 +1,202 @@
+mixin header(data)
+    .header.not-styleLink
+        .header__top
+            .container
+                .row
+                    .col-lg-3
+                        a.header__logo: +img('assets/header/logo', 'png')
+                    .col-lg-9
+                        .header__nav
+                            .header__nav-table
+                                .header__nav-table-cell
+                                    ul.header__menu
+                                        li.active: a(href='#') Обмен
+                                        li: a(href='#') Правила
+                                        li: a(href='#') Партнерам
+                                        li: a(href='#') Новости
+                                        li: a(href='#') FAQ
+                                        li: a(href='#') Контакты
+
+                                .header__nav-table-cell
+        br
+        br
+        br
+        .openSelectCoin
+            .openSelectCoin__after
+            .container
+                .row
+                    .col-lg-5
+                        .openSelectCoin__content.openSelectCoin__content_left
+                            button.openSelectCoin__btnClear #[+icon('delete', 'openSelectCoin__icon-delete', 35, 35)] Закрыть
+
+                            p.openSelectCoin__title.text-center Выберите валюту, #[br] которую хотите отдать
+                            br
+                            .openSelectCoin__content-allW
+                                ul.openSelectCoin__list
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн
+
+
+
+
+                    .col-lg-2
+                    .col-lg-5
+                        .openSelectCoin__content.openSelectCoin__content_right
+                            button.openSelectCoin__btnClear #[+icon('delete', 'openSelectCoin__icon-delete', 35, 35)] Закрыть
+
+                            p.openSelectCoin__title.text-center Выберите валюту, #[br] которую хотите получить
+                            br
+                            .openSelectCoin__content-allW
+                                ul.openSelectCoin__list
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+                                    li.openSelectCoin__list-row
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
+                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
+                                        .openSelectCoin__list-item
+                                            a(href='#').openSelectCoin__item
+                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
+                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+        .header__bottom
+            .container
+                h1.text-center.fwb Обмен Bitcoin на Сбербанк
+                br
+                br
+                form.mainForm
+                    .row
+                        .col-xs-5
+                            .block-title-min
+                                span.db.title-min: b Вы отдаете:
+                                span.db.title-min__sib.text-opacity Выберите валюту и сумму, которую хотите обменять
+                            .form-group
+                                .obm-select
+                                    .obm-select__table
+                                        .obm-select__table-cell
+                                            .obm-select__el
+                                                span.last__item-currency-icon.last__item-currency-icon_white: i.s-btc
+                                                .obm-select__el-title Bitcoin
+                                        .obm-select__table-cell.obm-select__table-cell_tr
+                                            a(href='#' data-el='.openSelectCoin__content_left').obm-select__choice.color-black.not-styleLink: b #[span.color-black__title.color-black__title_viewBorder Выбрать] #[i.caret]
+
+                            .obm-input
+                                .obm-input__table
+                                    .obm-input__table-cell.obm-input__table-cell_el
+                                        span.last__item-currency-icon.last__item-currency-icon_white: i.s-btc
+                                    .obm-input__table-cell
+                                        input.obm-input__input(value='0.003')
+                                    .obm-input__table-cell.text-right
+                                        span.obm-input__desc.text-opacity.text-min: b Min: 0.003
+
+                        .col-xs-2
+                            br
+                            br
+                            br
+                            br
+                            br
+                            a(href='#').db.mainForm__icon.text-center: +icon('reload_two')
+
+                        .col-xs-5
+                            .block-title-min
+                                span.db.title-min: b Вы получаете:
+                                span.db.title-min__sib Выберите валюту для получения
+                            .form-group
+                                .obm-select
+                                    .obm-select__table
+                                        .obm-select__table-cell
+                                            .obm-select__el
+                                                span.last__item-currency-icon.last__item-currency-icon_white: i.s-sber
+                                                .obm-select__el-title СберОнлайн
+                                        .obm-select__table-cell.obm-select__table-cell_tr
+                                            a(href='#' data-el='.openSelectCoin__content_right').obm-select__choice.color-black.not-styleLink: b #[span.color-black__title.color-black__title_viewBorder Выбрать] #[i.caret]
+
+                            .obm-input
+                                .obm-input__table
+                                    .obm-input__table-cell.obm-input__table-cell_el
+                                        span.last__item-currency-icon.last__item-currency-icon_white: i.s-sber
+                                    .obm-input__table-cell
+                                        input.obm-input__input(value='10 000')
+                                    .obm-input__table-cell.text-right
+                                        span.obm-input__desc.text-opacity.text-min: b Руб.
+                    br
+                    br
+
+                    .text-center.mainForm__block-btn
+                        p.fwL Курс обмена: 1 BTC - 518515.447 RUR
+                        p: button.btn.btn-default.btn-width.btn-shadow: b Начать обмен
+                        span.text-opacity Нажимая на эту кнопку, я соглашаюсь с #[br] #[a(href="#").color-black: span.color-black__title.color-black__title_viewBorder правилами обмена].
+
+
+
+
+
+

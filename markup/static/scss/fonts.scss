@@ -1,0 +1,19 @@
+/* Your custom fonts here */
+@import "libraries/bourbon/bourbon";
+
+// Example
+//https://edgewebfonts.adobe.com/help#using-fonts-in-css
+// 100 -> Thin, Hairline
+// 200 -> Extra Light
+// 300 -> Light
+// 400 -> Normal, Book
+// 500 -> Medium
+// 600 -> Semibold, Demibold
+// 700 -> Bold
+// 800 -> Heavy, Extra Bold
+// 900 -> Black
+
+@include font-face("MuseoSans", "../fonts/", $file-formats: woff eot otf svg ttf){
+  font-style: normal;
+  font-weight: 100;
+};
