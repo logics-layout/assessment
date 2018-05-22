@@ -19,35 +19,35 @@ const jsPathesToLint = [].concat.apply([], [
 module.exports = () => {
     return gulp.task('js:check', done => {
 
-        /* eslint-disable no-case-declarations */
-        if (tars.config.js.lint) {
-            switch (tars.config.js.workflow) {
-                case 'modular':
-                    switch (tars.config.js.bundler) {
-                        case 'webpack':
-                        default:
-                            tars.skipTaskLog('js:check', 'Code will be linted by built-in linter in bundler');
-                            return done(null);
-                    }
-                case 'concat':
-                default:
-                    const eslint = tars.require('gulp-eslint');
+            /* eslint-disable no-case-declarations */
+            // if (tars.config.js.lint) {
+            //     switch (tars.config.js.workflow) {
+            //         case 'modular':
+            //             switch (tars.config.js.bundler) {
+            //                 case 'webpack':
+            //                 default:
+            //                     tars.skipTaskLog('js:check', 'Code will be linted by built-in linter in bundler');
+            //                     return done(null);
+            //             }
+            //         case 'concat':
+            //         default:
+            //             const eslint = tars.require('gulp-eslint');
+            //
+            //             return gulp.src(jsPathesToLint)
+            //                 .pipe(plumber({
+            //                     errorHandler() {
+            //                         notifier.error('An error occurred while checking js.');
+            //                     }
+            //                 }))
+            //                 .pipe(cache('eslint'))
+            //                 .pipe(eslint())
+            //                 .pipe(eslint.formatEach())
+            //                 .pipe(eslint.failAfterError());
+            //     }
+            // }
+            /* eslint-enable no-case-declarations */
 
-                    return gulp.src(jsPathesToLint)
-                        .pipe(plumber({
-                            errorHandler() {
-                                notifier.error('An error occurred while checking js.');
-                            }
-                        }))
-                        .pipe(cache('eslint'))
-                        .pipe(eslint())
-                        .pipe(eslint.formatEach())
-                        .pipe(eslint.failAfterError());
-            }
-        }
-        /* eslint-enable no-case-declarations */
-
-        tars.skipTaskLog('js:check', 'JavaScript check is not used');
-        done(null);
-    });
+            tars.skipTaskLog('js:check', 'JavaScript check is not used');
+    done(null);
+});
 };

@@ -5,6 +5,7 @@ html(class="no-js", lang="ru")
     include ../components/head/head
     include ../components/header/header
     include ../components/footer/footer
+    include ../components/popup/popup
 
     head
         //- start  block head
@@ -17,8 +18,20 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
 
-        +header(index)
         .page__wrapper
+            +header(index)
+            -if(!breadcrumb)
+                .breadcrumbBlock
+                    .container
+                        ul.breadcrumb.not-styleLink
+                            li: a(href="#"): span Главная
+                            - if(headData)
+                                li: span=headData.title
+
+                        - if(headData)
+                            h1.breadcrumbBlock__title=headData.title
+                        - else
+                            h1.breadcrumbBlock__title= head.defaults.title
             //- Include your components here
             // start block content
             section.page__wrapper-page
@@ -29,10 +42,11 @@ html(class="no-js", lang="ru")
         .page__footer
             +footer()
 
+        +popup()
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 
-        script(src="%=static=%js/main.js" type="text/javascript")
+        script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
         //- start block script
         block script
         //- end block script

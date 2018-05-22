@@ -1,199 +1,155 @@
 mixin header(data)
+    .header-mobile.not-styleLink
+        .header-mobile__open
+            .container
+                .header-mobile__open-content
+                    a(href="#").db.header__login
+                        .header__login-icon: +icon('profile')
+                        .header__login-title Вход в личный кабинет
+
+                    .header-mobile__open-nav
+                        ul
+                            li: a(href='#') Главная
+                            li
+                                a(href='#') Услуги &nbsp;#[i.s-arrow-bottom]
+                                .header-mobile__open-nav-sub
+                                    ul
+                                        li: a(href='#') Оценка недвижимости
+                                        li: a(href='#') Оспаривание кадастровой стоимости
+                                        li: a(href='#') Оценка бизнеса
+                                        li: a(href='#') Оценка движимого имущества
+                                        li: a(href='#') Независимая автоэкспертиза, оценка ущерба при ДТП
+                                        li: a(href='#') Судебная экспертиза
+
+                            li: a(href='#') Партнёрам
+                            li
+                                a(href='#') О компании &nbsp;#[i.s-arrow-bottom]
+                                .header-mobile__open-nav-sub
+                                    ul
+                                        li: a(href='#') Оценка недвижимости
+                                        li: a(href='#') Оспаривание кадастровой стоимости
+                                        li: a(href='#') Оценка бизнеса
+                                        li: a(href='#') Оценка движимого имущества
+                            li: a(href='#') Как заказать?
+                            li: a(href='#') Контакты
+
+
+                    br
+
+                    .header-mobile__open-marginBottom
+                        a(href='#').db.color-white.fzbMin #[span.db Выберите город:] #[span.db Челябинск &nbsp;#[i.s-arrow-bottom]]
+
+                    .header-mobile__open-marginBottom
+                        a(href='#').db.color-white.fzbMin Звоните:#[br]  #[b.fzbBig +7 351 #[span.color-green 247 95 31]]
+                    a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
+
+
+        .header-mobile__toolbar-fix
+        .header-mobile__toolbar
+            .container
+                .header-mobile__table
+                    .header-mobile__table-cell.header-mobile__table-cell_btn.header-mobile__table-cell_view
+                        .mobile-list-anim
+                            input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                            label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                                span.menu-mobile
+                                    span.menu-mobile-hamburger.one
+                                    span.menu-mobile-hamburger.two
+                                    span.menu-mobile-hamburger.three
+
+                    .header-mobile__table-cell
+                        a(href='#').header-mobile__logo: +img('assets/header/logo', 'png')
+
     .header.not-styleLink
-        .header__top
+        .header__top.fwSemibold
             .container
-                .row
-                    .col-lg-3
-                        a.header__logo: +img('assets/header/logo', 'png')
-                    .col-lg-9
-                        .header__nav
-                            .header__nav-table
-                                .header__nav-table-cell
-                                    ul.header__menu
-                                        li.active: a(href='#') Обмен
-                                        li: a(href='#') Правила
-                                        li: a(href='#') Партнерам
-                                        li: a(href='#') Новости
-                                        li: a(href='#') FAQ
-                                        li: a(href='#') Контакты
+                .header__top-table
+                    .header__top-table-section
+                        a(href='/').header__logo: +img('assets/header/logo', 'png')
+                    .header__top-table-section
+                        span.db Выберите город:
+                        span.db Челябинск &nbsp;#[i.s-arrow-bottom]
+                    .header__top-table-section
+                        span.db Напишите нам:
+                        a(href="#").db.color-default: span.color-default__title.color-default__title_viewBorder ocenka-74@mail.ru
+                    .header__top-table-section
+                        span.db Звоните:
+                        a(href="#").db.color-default.fzbBig +7 351 #[span.color-green 247 95 31]
+                    .header__top-table-section
+                        a(href='#popup-login').open-popup-link.db.header__login
+                            .header__login-icon: +icon('profile')
+                            .header__login-title Вход в личный кабинет
+                        a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
 
-                                .header__nav-table-cell
-        br
-        br
-        br
-        .openSelectCoin
-            .openSelectCoin__after
-            .container
-                .row
-                    .col-lg-5
-                        .openSelectCoin__content.openSelectCoin__content_left
-                            button.openSelectCoin__btnClear #[+icon('delete', 'openSelectCoin__icon-delete', 35, 35)] Закрыть
-
-                            p.openSelectCoin__title.text-center Выберите валюту, #[br] которую хотите отдать
-                            br
-                            .openSelectCoin__content-allW
-                                ul.openSelectCoin__list
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн
-
-
-
-
-                    .col-lg-2
-                    .col-lg-5
-                        .openSelectCoin__content.openSelectCoin__content_right
-                            button.openSelectCoin__btnClear #[+icon('delete', 'openSelectCoin__icon-delete', 35, 35)] Закрыть
-
-                            p.openSelectCoin__title.text-center Выберите валюту, #[br] которую хотите получить
-                            br
-                            .openSelectCoin__content-allW
-                                ul.openSelectCoin__list
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
-                                    li.openSelectCoin__list-row
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-btc
-                                                span.openSelectCoin__item-title Bitcoin #[small Резерв: 59 BTC]
-                                        .openSelectCoin__list-item
-                                            a(href='#').openSelectCoin__item
-                                                span.openSelectCoin__item-icon: span.last__item-currency-icon: i.s-sber
-                                                span.openSelectCoin__item-title СберОнлайн #[small Резерв: 34 2836 Руб]
+        .header__bottom-fix
         .header__bottom
             .container
-                h1.text-center.fwb Обмен Bitcoin на Сбербанк
-                br
-                br
-                form.mainForm
-                    .row
-                        .col-xs-5
-                            .block-title-min
-                                span.db.title-min: b Вы отдаете:
-                                span.db.title-min__sib.text-opacity Выберите валюту и сумму, которую хотите обменять
-                            .form-group
-                                .obm-select
-                                    .obm-select__table
-                                        .obm-select__table-cell
-                                            .obm-select__el
-                                                span.last__item-currency-icon.last__item-currency-icon_white: i.s-btc
-                                                .obm-select__el-title Bitcoin
-                                        .obm-select__table-cell.obm-select__table-cell_tr
-                                            a(href='#' data-el='.openSelectCoin__content_left').obm-select__choice.color-black.not-styleLink: b #[span.color-black__title.color-black__title_viewBorder Выбрать] #[i.caret]
+                .header__bottom-table
+                    .header__bottom-table-cell.header__bottom-table-cell_logo
+                        a(href='/').header__logo: +img('assets/header/logo-fix', 'png')
 
-                            .obm-input
-                                .obm-input__table
-                                    .obm-input__table-cell.obm-input__table-cell_el
-                                        span.last__item-currency-icon.last__item-currency-icon_white: i.s-btc
-                                    .obm-input__table-cell
-                                        input.obm-input__input(value='0.003')
-                                    .obm-input__table-cell.text-right
-                                        span.obm-input__desc.text-opacity.text-min: b Min: 0.003
+                    .header__bottom-table-cell
+                        ul.header__nav.fwSemibold
+                            li: a(href='#') Главная
+                            li.active
+                                a(href='#') Услуги &nbsp;#[i.s-arrow-bottom-w]
+                                .header__nav-sub
+                                    .container
+                                        .header__nav-sub-table
+                                            .header__nav-sub-table-cell
+                                                .header__nav-list
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/home', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оценка недвижимости
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/2', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оспаривание кадастровой стоимости
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/3', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оценка бизнеса
 
-                        .col-xs-2
-                            br
-                            br
-                            br
-                            br
-                            br
-                            a(href='#').db.mainForm__icon.text-center: +icon('reload_two')
+                                            .header__nav-sub-table-cell
+                                                .header__nav-list
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/4', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оценка движимого имущества
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/5', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Независимая автоэкспертиза / оценка ущерба при ДТП
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/6', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Судебная экспертиза
 
-                        .col-xs-5
-                            .block-title-min
-                                span.db.title-min: b Вы получаете:
-                                span.db.title-min__sib Выберите валюту для получения
-                            .form-group
-                                .obm-select
-                                    .obm-select__table
-                                        .obm-select__table-cell
-                                            .obm-select__el
-                                                span.last__item-currency-icon.last__item-currency-icon_white: i.s-sber
-                                                .obm-select__el-title СберОнлайн
-                                        .obm-select__table-cell.obm-select__table-cell_tr
-                                            a(href='#' data-el='.openSelectCoin__content_right').obm-select__choice.color-black.not-styleLink: b #[span.color-black__title.color-black__title_viewBorder Выбрать] #[i.caret]
 
-                            .obm-input
-                                .obm-input__table
-                                    .obm-input__table-cell.obm-input__table-cell_el
-                                        span.last__item-currency-icon.last__item-currency-icon_white: i.s-sber
-                                    .obm-input__table-cell
-                                        input.obm-input__input(value='10 000')
-                                    .obm-input__table-cell.text-right
-                                        span.obm-input__desc.text-opacity.text-min: b Руб.
-                    br
-                    br
+                            li: a(href='#') Партнёрам
+                            li
+                                a(href='#') О компании &nbsp;#[i.s-arrow-bottom-w]
+                                .header__nav-sub
+                                    .container
+                                        .header__nav-sub-table
+                                            .header__nav-sub-table-cell
+                                                .header__nav-list
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/home', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оценка недвижимости
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/2', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оспаривание кадастровой стоимости
+                                                    a(href='#').header__nav-list-item.color-white
+                                                        span.header__nav-list-item-icon: +img('content/sub-menu/3', 'png')
+                                                        span.header__nav-list-item-title: span.color-white__title Оценка бизнеса
 
-                    .text-center.mainForm__block-btn
-                        p.fwL Курс обмена: 1 BTC - 518515.447 RUR
-                        p: button.btn.btn-default.btn-width.btn-shadow: b Начать обмен
-                        span.text-opacity Нажимая на эту кнопку, я соглашаюсь с #[br] #[a(href="#").color-black: span.color-black__title.color-black__title_viewBorder правилами обмена].
+                            li: a(href='#') Как заказать?
+                            li: a(href='#') Контакты
+                    .header__bottom-table-cell.header__bottom-table-cell_phone.header__bottom-table-cell_fix: a(href="#").db.fzbBig.color-white.fwSemibold +7 351 #[span.color-green 247 95 31]
+                    .header__bottom-table-cell.header__bottom-table-cell_fix: button.btn.btn-green Заказать звонок
+
+
+                    .header__bottom-table-cell.header__bottom-table-cell_fixNot
+                        form.header__search
+                            input.header__search-input(placeholder='Введите поисковый запрос')
+                            button.header__search-btn: i.s-search
+
 
 
 

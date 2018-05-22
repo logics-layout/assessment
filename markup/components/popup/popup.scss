@@ -1,0 +1,51 @@
+/* Magnific Popup CSS */
+
+@import "main";
+
+.popup-main {
+  background: #FFF;
+  padding: 46px 43px;
+  text-align: left;
+  width: 458px;
+  max-width: 100%;
+  margin: 40px auto;
+  position: relative;
+  &__title{
+    font-weight: 600;
+    font-size: 28px;
+    color: #46515a;
+    margin-bottom: 20px;
+  }
+  &__titleSub{
+    margin-bottom: 23px;
+  }
+
+  .mfp-close{
+    left: 100%;
+    right: auto;
+    height: 0;
+    line-height: 0;
+    padding-bottom: 134px;
+    i{
+      pointer-events: none;
+    }
+    &:hover{
+      @include opacity(0.5);
+    }
+  }
+  &__titleLink{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__titleTable{
+    display: table;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+      +*{
+        padding-left: 57px;
+      }
+    }
+  }
+}
+

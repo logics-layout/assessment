@@ -30,12 +30,45 @@ a{
   }
 }
 
+small, .small{
+  font-size: 12px;
+}
+
 .fwb{
   font-weight: bold;
 }
 .fwL{
   font-weight: lighter;
 }
+
+.fwSemibold{
+  font-weight: 600;
+}
+
+.fzbBig{
+  font-size: 16px;
+}
+.fzbMin{
+  font-size: 14px;
+}
+
+h2, .h2{
+  font-size: 28px;
+  color: $colorAuto;
+  font-weight: 600;
+  margin-bottom: 1.2em;
+}
+h3, .h3{
+  font-size: 22px;
+  font-weight: 600;
+  color: $colorAuto;
+}
+h4, .h4{
+  font-size: 18px;
+  font-weight: 600;
+  color: $colorAuto;
+}
+
 
 .title-min{
   font-size: 18px;
@@ -77,5 +110,8 @@ a{
 
 
 
-@include text-border-bottom('black', #43464d);
+@include text-border-bottom('default', #46515a);
+@include text-border-bottom('grey', #677783);
 @include text-border-bottom('white', #fff);
+@include text-border-bottom('orange', #ff9908);
+@include text-border-bottom('green', #66b356);

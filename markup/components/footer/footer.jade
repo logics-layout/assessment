@@ -1,16 +1,61 @@
 mixin footer(data)
-    footer.footer.color-gray
+    footer.footer.not-styleLink
         .container
-            .footer__table
-                .footer__table-cell
-                    span © 2018, Все права защищены
-                .footer__table-cell
-                    ul.footer__menu
-                        li.active: a(href='#') Обмен
-                        li: a(href='#') Правила
-                        li: a(href='#') Партнерам
-                        li: a(href='#') Новости
-                        li: a(href='#') FAQ
-                        li: a(href='#') Контакты
-                .footer__table-cell.text-right
-                    span Сделано с душой
+            .row
+                .col-lg-3.col-xs-12
+                    .footer__logo-block
+                        a(href='#').db.footer__logo: +img('assets/footer/logo', 'png')
+                        br
+                        span.db © 2018 / Первая оценочная компания #[br] #[a(href='#').color-white: span.color-white__title.color-white__title_viewBorder Политика конфиденциальности]
+
+                    .hidden-md-down
+                        br
+                        br
+                        br
+                        br
+
+                        a(href='#').color-orange #[span.color-white Разработка #[br]и продвижение сайта —] #[span.color-orange__title ИНСАЙТ]
+                    .hidden-lg-up
+                        br
+                .col-xl-7.col-lg-6.col-xs-12
+                    .footer__table
+                        .footer__table-cell.footer__table-cell_service
+                            ul.footer__list
+                                li: a(href='#').color-green: span.color-green__title Услуги
+                                li: a(href='#').color-white: span.color-white__title Оценка недвижимости
+                                li: a(href='#').color-white: span.color-white__title Оспаривание кадастровой стоимости
+                                li: a(href='#').color-white: span.color-white__title Оценка бизнеса
+                                li: a(href='#').color-white: span.color-white__title Оценка движимого имущества
+                                li: a(href='#').color-white: span.color-white__title Независимая автоэкспертиза / оценка ущерба при ДТП
+                                li: a(href='#').color-white: span.color-white__title Судебная экспертиза
+
+                        .footer__table-cell
+                            ul.footer__list
+                                li: a(href='#').color-green: span.color-green__title Компания
+                                li: a(href='#').color-white: span.color-white__title Главная
+                                li: a(href='#').color-white: span.color-white__title Партнёрам
+                                li: a(href='#').color-white: span.color-white__title Услуги
+                                li: a(href='#').color-white: span.color-white__title О компании
+                                li: a(href='#').color-white: span.color-white__title Как заказать?
+                                li: a(href='#').color-white: span.color-white__title Контакты
+
+
+                .col-xl-2.col-lg-3.col-xs-12
+                    .footer__logo-block
+                        .hidden-lg-up
+                            br
+                        a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
+                        div
+                        br
+                        a(href='#').db.color-white: span.color-white__title +7 351 247 95 31
+                        a(href='#').db.color-white: span.color-white__title +7 495 241 05 31
+                        a(href='#').db.color-white: span.color-white__title.color-white__title_viewBorder ocenka-74@mail.ru
+                        br
+                        .hidden-md-up
+                        span.footer__addres Челябинск, пр. Ленина 89, оф. 504 Москва, Киевское ш. 22-й км (б/парк Румянцево), оф. Е/511-05
+
+                        .hidden-lg-up
+                            br
+                            br
+                            br
+                            a(href='#').color-orange #[span.color-white Разработка #[br]и продвижение сайта —] #[span.color-orange__title ИНСАЙТ]

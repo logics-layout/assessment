@@ -28,10 +28,10 @@
     +li{
       &:before {
         // [converter] Workaround for https://github.com/sass/libsass/issues/1115
-        content: "/"; // Unicode space added since inline-block means non-collapsing white-space
+        content: ">"; // Unicode space added since inline-block means non-collapsing white-space
         margin: 0 4px;
         color: #6d6d6d;
-        font-size: 17px;
+        font-size: 14px;
         //@include bg($breadcrumb-after);
         display: inline-block;
         vertical-align: middle;
@@ -44,13 +44,13 @@
       line-height: 30px;
       display: inline-block;
       vertical-align: middle;
-      color: black;
       font-size: 14px;
       >span{
-        @include link-border-color(black);
+        @include link-border-color(#66b356);
       }
     }
     >a{
+      color: #66b356;
       &:hover{
         text-decoration: none;
       }

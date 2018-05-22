@@ -13,7 +13,17 @@
 // 800 -> Heavy, Extra Bold
 // 900 -> Black
 
-@include font-face("MuseoSans", "../fonts/", $file-formats: woff eot otf svg ttf){
+@include font-face("SourceSansPro", "../fonts/SourceSansPro/SourceSansPro-Regular", $file-formats: woff eot otf svg ttf){
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
+};
+
+@include font-face("SourceSansPro", "../fonts/SourceSansPro/SourceSansPro-Semibold", $file-formats: woff eot otf svg ttf){
+  font-style: normal;
+  font-weight: 600;
+};
+
+@include font-face("SourceSansPro", "../fonts/SourceSansPro/SourceSansPro-Bold", $file-formats: woff eot otf svg ttf){
+  font-style: normal;
+  font-weight: 700;
 };

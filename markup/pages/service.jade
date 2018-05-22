@@ -1,0 +1,146 @@
+extends main
+
+block head
+    - var headData = {title: "Услуги компании"}
+
+block content
+    .content.content_logoBg
+        .container
+            .hidden-md-down
+                br
+                br
+            .row
+                .col-lg-8
+                    .service-list.not-styleLink.masonry-col2
+                        .grid-sizer
+                        .gutter-sizer
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/1', 'png')
+                                        span.service-list__item-title Оценка #[br] недвижимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/2', 'png')
+                                        span.service-list__item-title Оценка бизнеса
+                        .masonry-col2__section.col-1
+                            .service-list__itemGren
+                                .service-list__itemGren-icon: +img('content/service-list/4', 'png')
+                                .service-list__itemGren-title Оценка движимого имущества
+                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
+                                a(href='#').service-list__itemGren-link: span Производственного оборудования
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/3', 'png')
+                                        span.service-list__item-title Оспаривание #[br]кадастровой стоимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/6', 'png')
+                                        span.service-list__item-title Судебная экспертиза
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/5', 'png')
+                                        span.service-list__item-title Независимая автоэкспертиза после ДТП
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/7', 'png')
+                                        span.service-list__item-title Консалтинг в сфере недвижимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/8', 'png')
+                                        span.service-list__item-title Оценка ущерба имуществу
+
+                .col-lg-4
+                    .nav-list
+                        .nav-list__title Заказать отчёт об оценке
+                        ul.nav-list__list.not-styleLink
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Apartment')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Квартира
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Residential-building')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Жилой дом
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Land-plot')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Земельный участок
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('more')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Другое
+
+
+            br
+            br
+
+
+
+
+
+
+    .form-callback.form-callback_white
+        .container
+            .form-callback__title.color-default Заказывайте наши услуги
+            .row
+                .col-lg-4
+                    .form-group
+                        input.form-control(placeholder='Введите ваше Ф.И.О.')
+                    .form-group.form-group__required
+                        input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                .col-lg-4
+                    .form-group
+                        textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                .col-lg-4
+                    .form-group
+                        .row
+                            .col-lg-12.col-xs-12.col-md-6
+                                div.form-callback__notRobot: +img('general/not-robot_w', 'png')
+                            .col-lg-8.col-xs-12.col-md-6
+                                button.btn.btn-orange.btn-width Оставить заявку
+
+            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+
+
+block script
+    script(src='%=static=%js/separate-js/imagesloaded.pkgd.min.js')
+    script(src='%=static=%js/separate-js/Masonry.js')
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+extends main
+
+block head
+    - var headData = {title: "Контакты"}
+
+
+block content
+    .content.content_white
+        .container
+            h3 Общество с ограниченной ответственностью «Первая оценочная компания»
+            br
+            .contacts
+                .contacts__table
+                    .contacts__table-cell
+                        p.h4 Офис в Москве:
+                        br
+                        .contacts__elTable
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('label')
+                                .contacts__el-title 454080, Россия, г. Челябинск, проспект Ленина, 89, офис 504
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('phone')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title (351) 247-95-31] &nbsp;&nbsp;/&nbsp;&nbsp; #[a(href='#').not-styleLink.color-default: span.color-default__title (351) 248-94-00]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('email')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title ocenka-74@mail.ru]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('time')
+                                .contacts__el-title Время работы с клиентами: Пн - Пт: с 9.00 до 18.00, #[br] Сб: отдельные работы по предварительной записи
+                            .contacts__el.contacts__el_notBorder
+                                .contacts__el-icon.color-green
+                                .contacts__el-title: button.btn.btn-orange.btn-lg Показать на карте
+
+                    .contacts__table-cell
+                        p.h4 Офис в Челябинске:
+                        br
+                        .contacts__elTable
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('label')
+                                .contacts__el-title г. Москва, Киевское ш. 22-й км (бизнес-парк Румянцево), корп. Е, офис 511-05
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('phone')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title +7 (495) 241-05-31]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('email')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title ocenka-777@mail.ru]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('time')
+                                .contacts__el-title Время работы с клиентами: Пн - Пт: с 9.00 до 18.00, #[br] Сб: отдельные работы по предварительной записи
+                            .contacts__el.contacts__el_notBorder
+                                    .contacts__el-icon.color-green
+                                    .contacts__el-title: button.btn.btn-orange.btn-lg Показать на карте
+
+                br
+                br
+                br
+        .contacts__maps
+            .contacts__maps-map: script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ai6bPkEnXssUUjpSC1mlIpdAXIymwLSB-&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+            .contacts__maps-contacts
+                .container
+                    .contacts__maps-contacts-content
+                        .contacts__elTable
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('label')
+                                .contacts__el-title 454080, Россия, г. Челябинск, проспект Ленина, 89, офис 504
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('phone')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title (351) 247-95-31] &nbsp;&nbsp;/&nbsp;&nbsp; #[a(href='#').not-styleLink.color-default: span.color-default__title (351) 248-94-00]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('email')
+                                .contacts__el-title #[a(href='#').not-styleLink.color-default: span.color-default__title ocenka-74@mail.ru]
+                            .contacts__el
+                                .contacts__el-icon.color-green: +icon('time')
+                                .contacts__el-title Время работы с клиентами: Пн - Пт: с 9.00 до 18.00, #[br] Сб: отдельные работы по предварительной записи
+
+
+
+
+
+
+
+        .form-callback
+            .container
+                .form-callback__title Заказывайте наши услуги
+                .row
+                    .col-lg-4
+                        .form-group
+                            input.form-control(placeholder='Введите ваше Ф.И.О.')
+                        .form-group.form-group__required
+                            input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                    .col-lg-4
+                        .form-group
+                            textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                    .col-lg-4
+                        .form-group
+                            .row
+                                .col-lg-12.col-xs-12.col-md-6
+                                    div.form-callback__notRobot: +img('general/not-robot', 'png')
+                                .col-lg-8.col-xs-12.col-md-6
+                                    button.btn.btn-orange.btn-width Оставить заявку
+
+                span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,11 +8,114 @@ body, html{
 @include my-media-query(max, 1325px) {
  
 }
+@include my-media-query(max, 1354px) {
+  .slider-accreditations {
+    .slick-arrow {
+      &.slick-prev {
+        right: 100%;
+        padding-right: 0px;
+      }
+      &.slick-next {
+        left: 100%;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+@include my-media-query(max, 1224px) {
+  .slider-accreditations {
+    .slick-arrow {
+      &.slick-prev {
+        right: auto;
+        left: 0;
+      }
+      &.slick-next {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
-  
+
+  .nav-list {
+    font-size: 16px;
+  }
+  .service-list__item{
+    font-size: 16px;
+  }
+  .service-list__itemGren-title{
+    font-size: 16px;
+  }
+  .header__nav{
+    margin: 0 -16px;
+    >li {
+      > a {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+  .header__bottom-table-cell_phone {
+    padding: 0px 10px;
+  }
+  .header__bottom{
+    .header__logo {
+      img{
+        width: 38px;
+      }
+    }
+  }
+  .header__bottom.fix{
+    .header__logo {
+      width: 44px;
+    }
+    .header__nav {
+      &>li{
+        font-size: 14px;
+        &>a{
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+      }
+    }
+  }
+  .footer__table-cell {
+    padding-right: 12px;
+  }
+
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .slider-accreditations {
+    .slick-arrow {
+      //display: none !important;
+    }
+  }
+
+  .nav-list {
+    font-size: 14px;
+  }
+  .service-list__item{
+    font-size: 14px;
+  }
+  .nav-list__list-item {
+    padding: 28.5px 0;
+  }
+  .nav-list__title {
+    padding: 26.5px 25px;
+  }
+  html, body {
+    font-size: 14px;
+    line-height: 1.55em;
+  }
+  .footer__logo-block{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .header{
+    display: none;
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -28,7 +131,15 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
-  
+  .footer{
+    &__addres{
+      display: block;
+      margin-right: -40px;
+    }
+  }
+  .header-mobile{
+    display: none;
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
@@ -36,9 +147,122 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .masonry-col2{
+    &__section{
+      margin-bottom: 20px;
+    }
+    .gutter-sizer{
+      width: 0;
+    }
+    .col-1,
+    .grid-sizer{
+      width: 100%;
+    }
+  }
+  .service-list__itemGren {
+    padding: 27px 24px;
+  }
+  .contacts{
+    &__maps{
+      &-contacts{
+        position: relative;
+        padding: 0;
+        //margin: 0 -15px;
+        &-content {
+          box-shadow: none;
+          height: auto;
+          padding: 14px 0;
+        }
+      }
+      &-map{
+        position: relative;
+        height: 350px;
+      }
+    }
+  }
+  h1, .h1 {
+    font-size: 30px;
+  }
+  .breadcrumbBlock{
+    padding: 12px 0;
+  }
+  .contacts {
+    &__table {
+      display: block;
+      &-cell {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 25px;
+        + * {
+          padding-top: 25px;
+          padding-left: 0;
+          border-top: 1px solid #b9c2c9;
+          .contacts__elTable {
+            .contacts__el {
+              &:not(.contacts__el_notBorder) {
+                .contacts__el-icon {
+                  &:before {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popup-main {
+    padding: 20px 17px;
+    .mfp-close {
+      width: 54px;
+      text-align: right;
+      left: auto;
+      right: 0;
+      bottom: 100%;
+      top: auto;
+      padding: 0;
+      height: 42px;
+    }
+    &__titleTable {
+      display: block;
+      &-cell {
+        display: block;
+        +*{
+          padding-left: 0;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+
+  .footer__table{
+    display: block;
+    text-align: center;
+    &-cell {
+      display: block;
+      padding-right: 0;
+    }
+  }
+  .footer__list{
+    margin: 20px 0;
+  }
+  .footer{
+    padding-top: 50px;
+    padding-bottom: 23px;
+  }
 
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .form-callback__title {
+    font-size: 23px
+  }
+  .form-callback{
+    padding: 25px 0;
+  }
+
   
 }

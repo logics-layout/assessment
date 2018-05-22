@@ -1,7 +1,10 @@
-  $btc: 0px 0px 0px 0px 18px 18px 40px 18px 'sprite.png' 's-btc';
-  $sber: 22px 0px -22px 0px 18px 17px 40px 18px 'sprite.png' 's-sber';
+  $arrow-bottom-w: 13px 26px -13px -26px 11px 7px 42px 38px 'sprite.png' 's-arrow-bottom-w';
+  $arrow-bottom: 28px 26px -28px -26px 11px 7px 42px 38px 'sprite.png' 's-arrow-bottom';
+  $arrow-right: 0px 26px 0px -26px 9px 12px 42px 38px 'sprite.png' 's-arrow-right';
+  $close: 26px 0px -26px 0px 16px 16px 42px 38px 'sprite.png' 's-close';
+  $search: 0px 0px 0px 0px 22px 22px 42px 38px 'sprite.png' 's-search';
 
-  $spritesheet-sprites: ($btc,$sber,);
+  $spritesheet-sprites: ($arrow-bottom-w,$arrow-bottom,$arrow-right,$close,$search,);
 
   @mixin sprite-position($sprite) {
     $sprite-offset-x: nth($sprite, 3);

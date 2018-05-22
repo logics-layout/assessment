@@ -17,7 +17,7 @@
   //border: 3px solid transparent;
   border: none;
   white-space: nowrap;
-  @include button-size(15px, 22px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(14px, 24px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -26,7 +26,7 @@
   font-weight: 500;
   font-size: 16px;
 
-  border-radius: 50px;
+  border-radius: 6px;
   //box-shadow: 0 2px 3px 0 rgba(136, 42, 0, 0.25), inset 0 1px 0 0 rgba(255, 180, 90, 0.56);
 
   &.btn-ttu{
@@ -96,9 +96,9 @@ a.btn {
 // Alternate buttons
 // --------------------------------------------------
 
-//.btn-orange{
-//  @include button-variant(#fff, #fd6910);
-//}
+.btn-orange{
+  @include button-variant(#fff, #ff9908);
+}
 //
 //.btn-green{
 //  @include button-variant(#fff, #54bb00);
@@ -113,8 +113,8 @@ a.btn {
   @include button-variant(#1b1b1b, $mainColor);
 }
 
-.btn-red{
-  @include button-variant(#fff, #ff5f29);
+.btn-green{
+  @include button-variant(#fff, #2f9f13);
 }
 
 // Link buttons
@@ -161,10 +161,12 @@ a.btn {
 // --------------------------------------------------
 
 .btn-lg {
-  font-size: 20px;
-  font-weight: 700;
-  padding: 14px 31px;
-  max-width: 100%;
+  padding-left: 53px;
+  padding-right: 53px;
+  //font-size: 20px;
+  //font-weight: 700;
+  //padding: 14px 31px;
+  //max-width: 100%;
 
 }
 

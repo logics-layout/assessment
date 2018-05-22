@@ -1,0 +1,102 @@
+extends main
+
+block head
+    - var headData = {title: "Партнёрам"}
+    link(href='%=static=%css/separate-css/slick.css', rel="stylesheet", type="text/css")
+
+block content
+    .content.content_white
+        .hidden-md-down
+            br
+        .container
+            .accordion.not-styleLink
+                .accordion__item
+                    a(href='#').accordion__item-link
+                        .accordion__item-link-title Арбитражным управляющим
+                        .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                    .accordion__item-content
+                        span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                .accordion__item.open.active
+                    a(href='#').accordion__item-link
+                        .accordion__item-link-title Риелторам
+                        .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                    .accordion__item-content
+                        span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                .accordion__item
+                    a(href='#').accordion__item-link
+                        .accordion__item-link-title Оценщикам в регионах
+                        .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                    .accordion__item-content
+                        span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                .accordion__item
+                    a(href='#').accordion__item-link
+                        .accordion__item-link-title ЗПИФам
+                        .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                    .accordion__item-content
+                        span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+
+            br
+
+            p.h2 Аккредитации
+
+            .slider-accreditations
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                .slider-accreditations__section
+                    .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+
+            .slider-accreditations-dots
+
+
+        br
+        br
+    .form-callback
+        .container
+            .form-callback__title Заказывайте наши услуги
+            .row
+                .col-lg-4
+                    .form-group
+                        input.form-control(placeholder='Введите ваше Ф.И.О.')
+                    .form-group.form-group__required
+                        input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                .col-lg-4
+                    .form-group
+                        textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                .col-lg-4
+                    .form-group
+                        .row
+                            .col-lg-12.col-xs-12.col-md-6
+                                div.form-callback__notRobot: +img('general/not-robot', 'png')
+                            .col-lg-8.col-xs-12.col-md-6
+                                button.btn.btn-orange.btn-width Оставить заявку
+
+            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+
+block script
+    script(src='%=static=%js/separate-js/slick.min.js')
+
+
+
+
+
+
+
+
+
+

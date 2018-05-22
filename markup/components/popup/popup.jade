@@ -1,0 +1,58 @@
+mixin popup(data)
+    .popup
+        form(id="callback" class="popup-main mfp-hide")
+            p.popup-main__title Закажите звонок
+            p.popup-main__titleSub Наши специалисты свяжутся с Вами в ближайшее время
+
+            .form-group
+                input.form-control(placeholder='Введите ваше Ф.И.О.')
+            .form-group.form-group__required
+                input.form-control(placeholder='Укажите номер вашего телефона', type='tel')
+
+            .form-group
+                button.btn.btn-orange Заказать звонок
+
+            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+        form(id="popup-login" class="popup-main mfp-hide")
+
+            .popup-main__titleTable
+                .popup-main__titleTable-cell
+                    span.popup-main__title Авторизация
+                .popup-main__titleTable-cell
+                    a(href='#popup-registration').open-popup-link.not-styleLink.color-grey: span.color-grey__title.color-grey__title_viewBorder.popup-main__titleLink.color-grey__title_dashed Регистрация
+            br
+
+            .form-group
+                input.form-control(placeholder='Введите ваше Ф.И.О.')
+            .form-group.form-group__required
+                input.form-control(placeholder='Адрес эл. почты')
+            .form-group.form-group__required
+                input.form-control(placeholder='Укажите номер вашего телефона', type='tel')
+
+            .form-group
+                button.btn.btn-orange.btn-width Войти в личный кабинет
+
+            .text-center
+                a(href='#').not-styleLink.color-default: span.color-default__title.color-default__title_dashed.color-default__title_viewBorder Забыли пароль?
+
+        form(id="popup-registration" class="popup-main mfp-hide")
+            .popup-main__titleTable
+                .popup-main__titleTable-cell
+                    span.popup-main__title Регистрация
+                .popup-main__titleTable-cell
+                    a(href='popup-login').open-popup-link.not-styleLink.color-grey: span.color-grey__title.color-grey__title_viewBorder.popup-main__titleLink.color-grey__title_dashed Авторизация
+            br
+
+            .form-group
+                input.form-control(placeholder='Введите ваше Ф.И.О.')
+            .form-group.form-group__required
+                input.form-control(placeholder='Адрес эл. почты')
+            .form-group.form-group__required
+                input.form-control(placeholder='Укажите номер вашего телефона', type='tel')
+
+            .form-group
+                button.btn.btn-orange.btn-width Зарегистрироваться
+
+            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
