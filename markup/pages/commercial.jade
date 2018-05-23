@@ -1,0 +1,245 @@
+extends main
+
+block head
+    - var headData = {title: "Коммерческая недвижимость"}
+    link(href='%=static=%css/separate-css/slick.css', rel="stylesheet", type="text/css")
+
+block content
+    .content
+        .container
+            //.hidden-md-down
+                br
+
+            h2 Выберите тип недвижимости:
+
+            .service-tabs-list.not-styleLink
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Оценка #[br]Квартиры
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Жилой дома,#[br]коттедж, таун-хаус
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Земельный участок под ИЖС,#[br]включая садовые участки
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item.active
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Коммерческая#[br]недвижимость
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Имущественный#[br]комплекс
+
+            br
+            br
+            .row
+                .col-lg-6
+                    p.fzbBigMega Оценка недвижимости – наиболее востребованный вид оценочной деятельности компании, необходимый для определения точной и актуальной стоимости объекта.
+                    br
+                    ul.list-advantages
+                        li.list-advantages__item
+                                .list-advantages__item-icon: span: +img('content/list-advantages/1', 'png')
+                                .list-advantages__item-title #[b.color-green Наличие аккредитации] в крупнейших федеральных и региональных банках
+                        li.list-advantages__item
+                                .list-advantages__item-icon: span: +img('content/list-advantages/2', 'png')
+                                .list-advantages__item-title #[b.color-green Фиксированная стоимость] услуги обсуждается заранее и закрепляется в договоре
+                        li.list-advantages__item
+                                .list-advantages__item-icon: span: +img('content/list-advantages/3', 'png')
+                                .list-advantages__item-title #[b.color-green Высокий уровень] внутренней автоматизации и стандартизации работ
+
+                .col-lg-1.hidden-lg-down
+                .col-xl-5.col-lg-6
+                    .form-content
+                        p.form-content__title Оформите заявку на оценку #[br] коммерческой недвижимости
+                        p.form-content__titleSub Наши специалисты свяжутся с Вами в ближайшее время
+
+                        .form-group
+                            input.form-control(placeholder='Введите ваше Ф.И.О.')
+
+                        .form-group.form-group__required
+                            input.form-control(placeholder='Укажите номер вашего телефона', type='tel')
+
+                        .form-content__table
+                            .form-content__table-cell: .form-group: +img('general/not-robot_w', 'png')
+                            .form-content__table-cell: .form-group: button.btn.btn-orange.btn-width Оставить заявку
+
+
+                        small Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+            br
+            br
+
+        .list-advantagesBg
+            .container
+                ul.list-advantagesBg__list
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/1', 'png')
+                            .list-advantagesBg__list-item-text Мы консультируем клиентов с целью их развития, обретения уверенности в завтрашнем дне и принятия верных решений
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/2', 'png')
+                            .list-advantagesBg__list-item-text Профессионализм и компетентность наших сотрудников дают возможность клиентам и партнерам находить эффективные пути ведения бизнеса
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/3', 'png')
+                            .list-advantagesBg__list-item-text Наши отчеты об оценке стоимости всегда успешно проходят кредитные комитеты, что позволяет решить Ваши задачи в кратчайший срок
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/1', 'png')
+                            .list-advantagesBg__list-item-text Мы консультируем клиентов с целью их развития, обретения уверенности в завтрашнем дне и принятия верных решений
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/2', 'png')
+                            .list-advantagesBg__list-item-text Профессионализм и компетентность наших сотрудников дают возможность клиентам и партнерам находить эффективные пути ведения бизнеса
+                    li.list-advantagesBg__list-section
+                        .list-advantagesBg__list-item
+                            .list-advantagesBg__list-item-icon: +img('content/list-advantagesBg/3', 'png')
+                            .list-advantagesBg__list-item-text Наши отчеты об оценке стоимости всегда успешно проходят кредитные комитеты, что позволяет решить Ваши задачи в кратчайший срок
+
+        .content-bgRight.page-content
+            .container
+                .content-bgRight__table
+                    .content-bgRight__table-cell
+                        .content-bgRight__left
+                            p.h2 Предоставляем услуги #[br]по оценке любого вида недвижимости
+                            p Первая оценочная компания предоставляет услуги по оценке любого вида недвижимости как частным клиентам, так и юридическим лицам. Если речь идет о жилой недвижимости, то ее оценка требуется главным образом в случаях получения ипотечного кредита, кредитования под залог, разделе имущества, оформлении наследственных прав или для уточнения рыночной стоимости при планировании продажи. Оценка коммерческой недвижимости или имущественных комплексов бывает необходима для грамотного привлечения инвестиций, принятия правильных управленческих решений, разделе бизнеса между собственниками, решении судебных споров, осуществлении процедур банкротства, налоговом и бизнес- планировании.
+                            br
+                            .row
+                                .col-lg-6
+                                    ul
+                                        li Маркированный список
+                                        li Маркированный список
+                                        li Маркированный список
+                                        li Маркированный список
+                                .col-lg-6
+                                    ol
+                                        li Маркированный список
+                                        li Маркированный список
+                                        li Маркированный список
+                                        li Маркированный список
+                            br
+
+                    .content-bgRight__table-cell.page
+                        .content-bgRight__right
+
+        .content_white
+            br
+            .container
+                p.h2 Аккредитации
+                .slider-accreditations
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+
+                .slider-accreditations-dots
+
+            br
+
+    .step
+        .container
+            .step__title Как заказать отчёт об оценке?
+        .step__greenBuffer
+        .step__green
+            .container
+                .step__content
+                    ul.step__list
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num 1
+                                    +img('content/step/1', 'png')
+                                .step__item-title Оставьте заявку
+                                .step__item-text На сайте или по #[br]телефону #[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder +7 495 721 18 41]
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num 2
+                                    +img('content/step/2', 'png')
+                                .step__item-title Предоставьте #[br]документы
+                                .step__item-text Электронные копии, #[br]предоставленные по эл. почте#[br]#[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder ocenka-74@mail.ru]
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num 3
+                                    +img('content/step/3', 'png')
+                                .step__item-title Оплата
+                                .step__item-text Оплата онлайн или #[br]наличными в офисе
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num 4
+                                    +img('content/step/4', 'png')
+                                .step__item-title Осмотр #[br](при необходимости)
+                                .step__item-text В будни и в выходные #[br]09:00 до 18:00
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num 5
+                                    +img('content/step/5', 'png')
+                                .step__item-title Подготовка отчета
+                                .step__item-text От 1 рабочего дня, после #[br]осмотра и предоставления #[br]всех документов
+                        li
+                            .step__item
+                                .step__item-icon
+                                    .step__item-icon-num.step__item-icon-num_bgGreen 6
+                                    +img('content/step/6', 'png')
+                                .step__item-title Доставка
+                                .step__item-text Отправим отчет курьером#[br]по указанному Вами адресу
+
+
+    .form-callback
+        .container
+            .form-callback__title Заказывайте наши услуги
+            .row
+                .col-lg-4
+                    .form-group
+                        input.form-control(placeholder='Введите ваше Ф.И.О.')
+                    .form-group.form-group__required
+                        input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                .col-lg-4
+                    .form-group
+                        textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                .col-lg-4
+                    .form-group
+                        .row
+                            .col-lg-12.col-xs-12.col-md-6
+                                div.form-callback__notRobot: +img('general/not-robot', 'png')
+                            .col-lg-8.col-xs-12.col-md-6
+                                button.btn.btn-orange.btn-width Оставить заявку
+
+            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+
+
+block script
+    script(src='%=static=%js/separate-js/slick.min.js')
+
+
+
+
+
+
+
+
+

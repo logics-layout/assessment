@@ -43,6 +43,13 @@ html(class="no-js", lang="ru")
             +footer()
 
         +popup()
+
+        a(href='#').button-top
+            .button-top__icon: i.s-arrow-top-circle
+            .button-top__title Наверх
+
+        a(href="#").phone-mobile.not-styleLink: i.s-phone-mobile
+
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 

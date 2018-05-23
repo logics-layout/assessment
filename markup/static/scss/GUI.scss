@@ -45,6 +45,10 @@ small, .small{
   font-weight: 600;
 }
 
+.fzbBigMega{
+  font-size: 18px;
+  line-height: 30px;
+}
 .fzbBig{
   font-size: 16px;
 }
@@ -56,6 +60,7 @@ h2, .h2{
   font-size: 28px;
   color: $colorAuto;
   font-weight: 600;
+  line-height: 1.4em;
   margin-bottom: 1.2em;
 }
 h3, .h3{
@@ -68,6 +73,54 @@ h4, .h4{
   font-weight: 600;
   color: $colorAuto;
 }
+
+h1, .h1{
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-bottom: 1.2em;
+}
+
+
+.page-content{
+  ol, ul{
+    list-style: none;
+    padding: 0;
+    li{
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 20px;
+      &:after{
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #2f9f13;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        line-height: 16.9px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+  ol{
+    li {
+      counter-increment: li;
+      padding-left: 37px;
+      &:after {
+        content: counter(li);
+        width: 16px;
+        height: 16px;
+        top: 5px;
+      }
+    }
+  }
+}
+
 
 
 .title-min{
@@ -111,6 +164,7 @@ h4, .h4{
 
 
 @include text-border-bottom('default', #46515a);
+@include text-border-bottom('blue', #008cff);
 @include text-border-bottom('grey', #677783);
 @include text-border-bottom('white', #fff);
 @include text-border-bottom('orange', #ff9908);

@@ -3,11 +3,522 @@ extends main
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
-    - var index = 'header_index'
+
+    link(href='%=static=%css/separate-css/slick.css', rel="stylesheet", type="text/css")
 
 
 block content
-    .container
-        //- for(var i = 0;i<10;i++)
-            p ggg
-        
+    .slider-main.slick-dots-w
+        - for(var i=0;i<3;i++)
+            .slider-main__section(style='background-image: url("%=static=%img/content/slider-main/1.jpg");')
+                .container
+                    p.slider-main__title Профессиональная #[br]независимая оценка
+                    .slider-main__line
+
+                    .hidden-md-down
+                        .row
+                            .col-lg-6
+                                ul.list-advantages
+                                    li.list-advantages__section
+                                        .list-advantages__item
+                                            .list-advantages__item-icon: div.list-advantages__item-icon-bgNot: +img('content/list-advantages/2', 'png')
+                                            .list-advantages__item-title #[b.color-green Фиксированная стоимость] услуги обсуждается заранее и закрепляется в договоре
+                                    li.list-advantages__section
+                                        .list-advantages__item
+                                            .list-advantages__item-icon: div.list-advantages__item-icon-bgNot: +img('content/list-advantages/3', 'png')
+                                            .list-advantages__item-title #[b.color-green Высокий уровень] внутренней автоматизации и стандартизации работ
+                                    li.list-advantages__section
+                                        .list-advantages__item
+                                            .list-advantages__item-icon: div.list-advantages__item-icon-bgNot: +img('content/list-advantages/1', 'png')
+                                            .list-advantages__item-title #[b.color-green Наличие аккредитации] в крупнейших федеральных и региональных банках
+                    .hidden-lg-up
+                        br
+                        br
+                        br
+                        br
+                        br
+                        a(href='#').slider-main__phone.not-styleLink +7 351 247 95 31
+                    br
+                    a(href='#callback').open-popup-link.btn.btn-orange.btn-lg.not-styleLink Оставить заявку
+
+    .content.content_logoBg
+        .container
+            .hidden-md-down
+                br
+            p.h1 Услуги компании
+            .row
+                .col-lg-8
+                    .service-list.not-styleLink.masonry-col2
+                        .grid-sizer
+                        .gutter-sizer
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/1', 'png')
+                                        span.service-list__item-title Оценка #[br] недвижимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/2', 'png')
+                                        span.service-list__item-title Оценка бизнеса
+                        .masonry-col2__section.col-1
+                            .service-list__itemGren
+                                .service-list__itemGren-icon: +img('content/service-list/4', 'png')
+                                .service-list__itemGren-title Оценка движимого имущества
+                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
+                                a(href='#').service-list__itemGren-link: span Производственного оборудования
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+                                a(href='#').service-list__itemGren-link: span Прочее имущество
+
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/3', 'png')
+                                        span.service-list__item-title Оспаривание #[br]кадастровой стоимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/6', 'png')
+                                        span.service-list__item-title Судебная экспертиза
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/5', 'png')
+                                        span.service-list__item-title Независимая автоэкспертиза после ДТП
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/7', 'png')
+                                        span.service-list__item-title Консалтинг в сфере недвижимости
+                        .masonry-col2__section.col-1
+                            a(href='#').service-list__item
+                                span.service-list__item-table
+                                    span.service-list__item-table-cell
+                                        span.service-list__item-icon: +img('content/service-list/8', 'png')
+                                        span.service-list__item-title Оценка ущерба имуществу
+
+                .col-lg-4
+                    .nav-list
+                        .nav-list__title Заказать отчёт об оценке
+                        ul.nav-list__list.not-styleLink
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Apartment')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Квартира
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Residential-building')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Жилой дом
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('Land-plot')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Земельный участок
+                            li: a(href="#").nav-list__list-item
+                                span.nav-list__list-item-table
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-icon: +icon('more')
+                                    span.nav-list__list-item-table-cell
+                                        span.nav-list__list-item-title Другое
+        br
+        br
+    .hidden-md-down
+        .chooseUs
+            .container
+                .chooseUs__title 10 причин, чтобы выбрать нас
+
+                ul.chooseUs__list
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/1', 'png')
+                            .chooseUs__item-title С Вами работают профессионалы, опыт работы специалистов с 2007 года
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/2', 'png')
+                            .chooseUs__item-title Более 1000 проектов ежегодно
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/3', 'png')
+                            .chooseUs__item-title Высокий уровень внутренней автоматизации и стандартизации работ
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/4', 'png')
+                            .chooseUs__item-title Cистема внутреннего контроля качества
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/5', 'png')
+                            .chooseUs__item-title Фиксированная стоимость услуги обсуждается заранее и закрепляется в договоре
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/6', 'png')
+                            .chooseUs__item-title Наличие аккредитации в крупнейших федеральных и региональных банках
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/7', 'png')
+                            .chooseUs__item-title Учитываем цель оценки, ее назначение и связанные с этим особенности процесса оценки и оформленияее результатов
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/8', 'png')
+                            .chooseUs__item-title Сопровождаем процесссогласования результатов оценки с кредитором или иным конечным пользователем оценки
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/9', 'png')
+                            .chooseUs__item-title Отстаиваем результатыв досудебном и судебном порядке
+                    li
+                        .chooseUs__item
+                            .chooseUs__item-icon: +img('content/chooseUs__list/10', 'png')
+                            .chooseUs__item-title Гражданская ответственность компании застрахованана 100 000 000 руб.
+
+        .content_white
+            br
+            .container
+                p.h2 Аккредитации
+                .slider-accreditations
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+
+                .slider-accreditations-dots
+
+            br
+            br
+
+        .step
+            .container
+                .step__title Как заказать отчёт об оценке?
+            .step__greenBuffer
+            .step__green
+                .container
+                    .step__content
+                        ul.step__list
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num 1
+                                        +img('content/step/1', 'png')
+                                    .step__item-title Оставьте заявку
+                                    .step__item-text На сайте или по #[br]телефону #[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder +7 495 721 18 41]
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num 2
+                                        +img('content/step/2', 'png')
+                                    .step__item-title Предоставьте #[br]документы
+                                    .step__item-text Электронные копии, #[br]предоставленные по эл. почте#[br]#[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder ocenka-74@mail.ru]
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num 3
+                                        +img('content/step/3', 'png')
+                                    .step__item-title Оплата
+                                    .step__item-text Оплата онлайн или #[br]наличными в офисе
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num 4
+                                        +img('content/step/4', 'png')
+                                    .step__item-title Осмотр #[br](при необходимости)
+                                    .step__item-text В будни и в выходные #[br]09:00 до 18:00
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num 5
+                                        +img('content/step/5', 'png')
+                                    .step__item-title Подготовка отчета
+                                    .step__item-text От 1 рабочего дня, после #[br]осмотра и предоставления #[br]всех документов
+                            li
+                                .step__item
+                                    .step__item-icon
+                                        .step__item-icon-num.step__item-icon-num_bgGreen 6
+                                        +img('content/step/6', 'png')
+                                    .step__item-title Доставка
+                                    .step__item-text Отправим отчет курьером#[br]по указанному Вами адресу
+
+
+        .form-callback
+            .container
+                .form-callback__title Заказывайте наши услуги
+                .row
+                    .col-lg-4
+                        .form-group
+                            input.form-control(placeholder='Введите ваше Ф.И.О.')
+                        .form-group.form-group__required
+                            input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                    .col-lg-4
+                        .form-group
+                            textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                    .col-lg-4
+                        .form-group
+                            .row
+                                .col-lg-12.col-xs-12.col-md-6
+                                    div.form-callback__notRobot: +img('general/not-robot', 'png')
+                                .col-lg-8.col-xs-12.col-md-6
+                                    button.btn.btn-orange.btn-width Оставить заявку
+
+                span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+    .team
+        .container
+            .team__title Наша команда
+
+            .team__cnt
+                .team__cnt-slider
+                    - for(var i=0;i<3;i++)
+                        .team__cnt-slider__section(style="background-image: url('%=static=%img/content/team/1.png');")
+                            span.team__cnt-slider__titlesBlock
+                                span.team__cnt-slider__titlesBlock-cell
+                                    span.team__cnt-slider__title Губанова Елена Валерьевна
+                                    span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-slider__section(style="background-image: url('%=static=%img/content/team/2.png');")
+                            span.team__cnt-slider__titlesBlock
+                                span.team__cnt-slider__titlesBlock-cell
+                                    span.team__cnt-slider__title Губанова Елена Валерьевна
+                                    span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-slider__section(style="background-image: url('%=static=%img/content/team/3.png');")
+                            span.team__cnt-slider__titlesBlock
+                                span.team__cnt-slider__titlesBlock-cell
+                                    span.team__cnt-slider__title Губанова Елена Валерьевна
+                                    span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-slider__section(style="background-image: url('%=static=%img/content/team/4.png');")
+                            span.team__cnt-slider__titlesBlock
+                                span.team__cnt-slider__titlesBlock-cell
+                                    span.team__cnt-slider__title Губанова Елена Валерьевна
+                                    span.team__cnt-slider__titleSub Помощник оценщика
+
+                .team__cnt-sliderName.hidden-lg-up
+                    - for(var i=0;i<3;i++)
+                        .team__cnt-sliderName__section.text-center
+                            span.team__cnt-slider__title Губанова Елена Валерьевна
+                            span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-sliderName__section.text-center
+                            span.team__cnt-slider__title Губанова Елена Валерьевна
+                            span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-sliderName__section.text-center
+                            span.team__cnt-slider__title Губанова Елена Валерьевна
+                            span.team__cnt-slider__titleSub Помощник оценщика
+                        .team__cnt-sliderName__section.text-center
+                            span.team__cnt-slider__title Губанова Елена Валерьевна
+                            span.team__cnt-slider__titleSub Помощник оценщика
+
+
+    .content.content_white.content_white_notBorder
+        .hidden-md-down
+            br
+            br
+            br
+        .container
+            p.h2 Сертификаты и дипломы
+            .slider-accreditations
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+                .slider-accreditations__section
+                    .slider-accreditations__item.slider-accreditations__item_padding: .slider-accreditations__item-cell: +img('content/certificate')
+
+            .slider-accreditations-dots
+
+            br.hidden-lg-up
+            br
+
+
+            .hidden-md-down
+
+                p.h2 Партнёрам
+
+                .accordion.not-styleLink
+                    .accordion__item
+                        a(href='#').accordion__item-link
+                            .accordion__item-link-title Арбитражным управляющим
+                            .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                        .accordion__item-content
+                            span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                    .accordion__item.open.active
+                        a(href='#').accordion__item-link
+                            .accordion__item-link-title Риелторам
+                            .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                        .accordion__item-content
+                            span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                    .accordion__item
+                        a(href='#').accordion__item-link
+                            .accordion__item-link-title Оценщикам в регионах
+                            .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                        .accordion__item-content
+                            span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+                    .accordion__item
+                        a(href='#').accordion__item-link
+                            .accordion__item-link-title ЗПИФам
+                            .accordion__item-link-icon: +icon('arrow-right', '', 20, 20)
+                        .accordion__item-content
+                            span Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. С другой стороны новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+
+    .hidden-md-down.form-callback.form-callback_white
+        .container
+            .form-callback__title Заказывайте наши услуги
+            .row
+                .col-lg-4
+                    .form-group
+                        input.form-control(placeholder='Введите ваше Ф.И.О.')
+                    .form-group.form-group__required
+                        input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                .col-lg-4
+                    .form-group
+                        textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                .col-lg-4
+                    .form-group
+                        .row
+                            .col-lg-12.col-xs-12.col-md-6
+                                div.form-callback__notRobot: +img('general/not-robot_w', 'png')
+                            .col-lg-8.col-xs-12.col-md-6
+                                button.btn.btn-orange.btn-width Оставить заявку
+
+            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+    .hidden-lg-up
+        .content.content_white
+            .container
+                p.h2 Аккредитации
+                .slider-accreditations
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/1')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/2')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/3')
+                    .slider-accreditations__section
+                        .slider-accreditations__item: .slider-accreditations__item-cell: +img('content/accreditations/4')
+
+                .slider-accreditations-dots
+
+                br
+                br
+
+            .step
+                .container
+                    .step__title Как заказать отчёт об оценке?
+                .step__greenBuffer
+                .step__green
+                    .container
+                        .step__content
+                            ul.step__list
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num 1
+                                            +img('content/step/1', 'png')
+                                        .step__item-title Оставьте заявку
+                                        .step__item-text На сайте или по #[br]телефону #[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder +7 495 721 18 41]
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num 2
+                                            +img('content/step/2', 'png')
+                                        .step__item-title Предоставьте #[br]документы
+                                        .step__item-text Электронные копии, #[br]предоставленные по эл. почте#[br]#[a(href='#').color-blue: span.color-blue__title.color-blue__title_viewBorder ocenka-74@mail.ru]
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num 3
+                                            +img('content/step/3', 'png')
+                                        .step__item-title Оплата
+                                        .step__item-text Оплата онлайн или #[br]наличными в офисе
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num 4
+                                            +img('content/step/4', 'png')
+                                        .step__item-title Осмотр #[br](при необходимости)
+                                        .step__item-text В будни и в выходные #[br]09:00 до 18:00
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num 5
+                                            +img('content/step/5', 'png')
+                                        .step__item-title Подготовка отчета
+                                        .step__item-text От 1 рабочего дня, после #[br]осмотра и предоставления #[br]всех документов
+                                li
+                                    .step__item
+                                        .step__item-icon
+                                            .step__item-icon-num.step__item-icon-num_bgGreen 6
+                                            +img('content/step/6', 'png')
+                                        .step__item-title Доставка
+                                        .step__item-text Отправим отчет курьером#[br]по указанному Вами адресу
+
+
+            .form-callback
+                .container
+                    .form-callback__title Заказывайте наши услуги
+                    .row
+                        .col-lg-4
+                            .form-group
+                                input.form-control(placeholder='Введите ваше Ф.И.О.')
+                            .form-group.form-group__required
+                                input.form-control(type='tel', placeholder='Укажите номер вашего телефона')
+
+                        .col-lg-4
+                            .form-group
+                                textarea.form-control(placeholder='Введите текст вашего вопроса', style='height: 124px;')
+
+                        .col-lg-4
+                            .form-group
+                                .row
+                                    .col-lg-12.col-xs-12.col-md-6
+                                        div.form-callback__notRobot: +img('general/not-robot', 'png')
+                                    .col-lg-8.col-xs-12.col-md-6
+                                        button.btn.btn-orange.btn-width Оставить заявку
+
+                    span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+
+block script
+    script(src='%=static=%js/separate-js/imagesloaded.pkgd.min.js')
+    script(src='%=static=%js/separate-js/Masonry.js')
+    script(src='%=static=%js/separate-js/slick.min.js')

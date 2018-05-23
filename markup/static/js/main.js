@@ -2,6 +2,11 @@ $('[href="#"]').click(function (e) {
     e.preventDefault();
 });
 
+var linkTop = $('.button-top');
+linkTop.click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+});
+
 $(window).on({
     load: function () {
         checkFooterHeight();
@@ -9,6 +14,12 @@ $(window).on({
         // IScrollFn();
     },
     scroll: function () {
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop > 600){
+            linkTop.addClass('active');
+        }else{
+            linkTop.removeClass('active');
+        }
         // var scrollTop = $(window).scrollTop();
         // if(scrollTop > 200){
         //     linkTop.addClass('active');
@@ -132,39 +143,107 @@ $('.accordion__item-link').click(function(e){
     });
 });
 
+if($.fn.slick){
+    $('.slider-accreditations').each(function () {
+        var _this = $(this);
+        _this.slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            dots: true,
+            appendDots: _this.parent().find('.slider-accreditations-dots'),
+            arrows: true,
+            prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-left' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-left'></use></svg></button>",
+            nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-right' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-right'></use></svg></button>",
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 452,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+    });
+    
+    $('.team__cnt-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-left' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-left'></use></svg></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-right' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-right'></use></svg></button>",
+        asNavFor: '.team__cnt-sliderName',
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 452,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
 
-$('.slider-accreditations').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    dots: true,
-    appendDots: $('.slider-accreditations-dots'),
-    arrows: true,
-    prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-left' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-left'></use></svg></button>",
-    nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-right' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-right'></use></svg></button>",
-    responsive: [
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+
+    $('.team__cnt-sliderName').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        arrows: false,
+        asNavFor: '.team__cnt-slider',
+        responsive: [
+            {
+                breakpoint: 452,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-            }
-        },
-        {
-            breakpoint: 452,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        },
-    ]
-});
+        ]
+    });
+    
+    
+
+    $('.slider-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-left' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-left'></use></svg></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-right' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-right'></use></svg></button>",
+    });
+    
+    
+}
 
 
 

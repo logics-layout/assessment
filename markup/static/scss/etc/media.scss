@@ -5,8 +5,9 @@ body, html{
   //min-width: 320px;
 }
 
+
 @include my-media-query(max, 1325px) {
- 
+
 }
 @include my-media-query(max, 1354px) {
   .slider-accreditations {
@@ -18,6 +19,61 @@ body, html{
       &.slick-next {
         left: 100%;
         padding-left: 0px;
+      }
+    }
+  }
+}
+@include my-media-query(max, 1300px) {
+  .slider-main{
+    .slick-arrow{
+      &.slick-prev{
+        margin-left: -580px;
+      }
+      &.slick-next{
+        margin-right: -580px;
+      }
+    }
+  }
+  .slider-main__section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@include my-media-query(min, 1316px) {
+  .team {
+    &__cnt {
+      &-slider {
+        .slick-arrow {
+          &:hover{
+            background-color: #ff9908;
+          }
+        }
+      }
+    }
+  }
+}
+@include my-media-query(max, 1316px) {
+  .team{
+    &__cnt{
+      &-slider{
+        margin-left: 0;
+        margin-right: 0;
+        .slick-arrow{
+          background-color: transparent;
+          fill: #46515a;
+          &:hover{
+            opacity: .8;
+          }
+          &.slick-prev{
+            right: auto;
+            left: 0;
+          }
+          &.slick-next{
+            right: 0;
+            left: auto;
+          }
+        }
       }
     }
   }
@@ -36,8 +92,23 @@ body, html{
     }
   }
 }
+
+@include my-media-query(max, 1163px) {
+
+}
+
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
 
+  .slider-main{
+    .slick-arrow{
+      &.slick-prev{
+        margin-left: -520px;
+      }
+      &.slick-next{
+        margin-right: -520px;
+      }
+    }
+  }
   .nav-list {
     font-size: 16px;
   }
@@ -84,9 +155,138 @@ body, html{
     padding-right: 12px;
   }
 
+  .list-advantagesBg {
+    &__list {
+      margin: -30px -30px !important;
+      > li {
+        padding: 30px 30px;
+      }
+    }
+  }
+
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .phone-mobile{
+    position: fixed;
+    bottom: 95px;
+    right: 15px;
+    z-index: 2;
+  }
+  .button-top{
+    display: none;
+  }
+
+  .team {
+    background: #fff;
+    &__title{
+      text-align: center;
+      font-size: 25px;
+    }
+    &__cnt {
+      margin-bottom: 0px;
+      &-slider {
+        margin: 0 -15px;
+      }
+    }
+  }
+  .team__cnt-slider__section {
+    height: 350px;
+  }
+
+    .slider-main{
+    text-align: center;
+    &__section {
+      position: relative;
+      padding: 47px 0;
+      &:before{
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.45);
+      }
+      >*{
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .slick-arrow{
+      display: none !important;
+    }
+    &__title{
+      color: #fff;
+      margin: 0;
+    }
+    &__line{
+      background-color: #fff;
+      margin: 0;
+    }
+    .slick-dots {
+      bottom: 190px;
+      li{
+        button{
+          &:after{
+            background-color: transparent;
+            border: 2px solid #fff;
+          }
+        }
+        &.slick-active{
+          button{
+            &:after{
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .step {
+    &__list {
+      >li{
+        width: 50%;
+        &:nth-of-type(2n) {
+          .step__item-icon {
+            &:after {
+              right: -500%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .content-bgRight {
+    background: #fff;
+    &__table {
+      display: block;
+      &-cell {
+        display: block;
+      }
+    }
+    &__left{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .list-advantagesBg {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__list {
+      > li {
+        font-size: 14px;
+      }
+    }
+  }
+  .fzbBigMega{
+    font-size: 16px;
+  }
   .slider-accreditations {
     .slick-arrow {
       //display: none !important;
@@ -94,10 +294,10 @@ body, html{
   }
 
   .nav-list {
-    font-size: 14px;
+    //font-size: 14px;
   }
   .service-list__item{
-    font-size: 14px;
+    //font-size: 14px;
   }
   .nav-list__list-item {
     padding: 28.5px 0;
@@ -116,6 +316,50 @@ body, html{
   .header{
     display: none;
   }
+  h2, .h2 {
+    font-size: 23px;
+  }
+  .service-list__item-table{
+    display: block;
+    height: auto;
+    text-align: left;
+    &-cell{
+      display: table;
+      >*{
+        display: table-cell;
+        vertical-align: middle;
+        +*{
+          padding-left: 28px;
+        }
+      }
+    }
+  }
+  .service-list__item{
+    padding: 26px 28px;
+    &-icon{
+
+    }
+    &-title{
+
+    }
+  }
+  .service-list__itemGren-link{
+    display: none !important;
+  }
+  .service-list__itemGren{
+    padding: 26px 28px;
+    display: table;
+    >*{
+      display: table-cell;
+      vertical-align: middle;
+      +*{
+        padding-left: 28px;
+      }
+    }
+  }
+  .content_logoBg{
+    background-image: none;
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -131,10 +375,44 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .phone-mobile{
+    display: none;
+  }
+  .team {
+    &__cnt {
+      &-slider {
+        &__section {
+          &:hover{
+            background-color: #2f9f13;
+            .team__cnt-slider__titlesBlock{
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .service-list__itemGren-icon{
+    width: 37px;
+  }
+  .step {
+    &__list {
+      > li {
+        &:nth-of-type(3n) {
+          .step__item-icon {
+            &:after {
+              right: -500%;
+            }
+          }
+        }
+      }
+    }
+  }
   .footer{
     &__addres{
       display: block;
-      margin-right: -40px;
+      margin-right: -25px;
     }
   }
   .header-mobile{
@@ -147,6 +425,122 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .slider-main {
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  .breadcrumbBlock {
+    text-align: center;
+  }
+  .nav-list__list-item:after {
+    right: 20px;
+  }
+  .nav-list__list-item{
+    padding-right: 35px;
+  }
+
+  .form-callback{
+    text-align: center;
+  }
+  .step {
+    &__content {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+  }
+  .step__list > li {
+    padding-bottom: 20px;
+  }
+  h2, .h2{
+    text-align: center;
+  }
+  .step__title{
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .step{
+    border-top: 4px solid #f6f7f8;
+    background: #fff;
+  }
+  .slider-accreditations .slick-arrow.slick-prev {
+    left: -10px;
+  }
+  .slider-accreditations .slick-arrow.slick-next {
+    right: -10px;
+  }
+  .slider-accreditations{
+    margin: 0;
+  }
+  .content_white:not(.content_white_notBorder){
+    border-top: 4px solid #f6f7f8;
+  }
+  .step {
+    &__list {
+      > li {
+        width: 100%;
+      }
+    }
+    &__item {
+      &-icon {
+        &:before {
+          display: none;
+        }
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .list-advantagesBg {
+    &__list {
+      >li{
+        width: 50%;
+      }
+    }
+  }
+  .form-content__table{
+    display: block;
+    &-cell{
+      display: block;
+    }
+  }
+  .form-content{
+    padding: 20px 15px;
+  }
+  .form-content__title {
+    font-size: 23px;
+    line-height: 32px;
+  }
+  .service-tabs-list {
+    display: block;
+    font-size: 0;
+    margin: -5px;
+    &__section {
+      font-size: 14px;
+      display: inline-block;
+      width: 50%;
+      padding: 5px !important;
+    }
+    &__item {
+      padding: 15px;
+      &-table {
+        height: auto;
+        display: block;
+        &-cell {
+          display: block;
+          height: auto;
+        }
+      }
+      &.active {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
   .masonry-col2{
     &__section{
       margin-bottom: 20px;
@@ -182,6 +576,7 @@ body, html{
   }
   h1, .h1 {
     font-size: 30px;
+    text-align: center;
   }
   .breadcrumbBlock{
     padding: 12px 0;
@@ -257,6 +652,30 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .list-advantagesBg {
+    &__list {
+      margin: -15px !important;
+      > li {
+        padding: 15px;
+      }
+    }
+  }
+  .form-content__title {
+    font-size: 19px;
+    line-height: 32px;
+  }
+  .list-advantages__item {
+    font-size: 14px;
+  }
+  .fzbBigMega {
+    font-size: 15px;
+    line-height: 1.8em;
+  }
+  .service-tabs-list {
+    &__section {
+      width: 100%;
+    }
+  }
   .form-callback__title {
     font-size: 23px
   }

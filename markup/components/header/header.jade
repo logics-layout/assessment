@@ -75,7 +75,7 @@ mixin header(data)
                     .header__top-table-section
                         span.db Звоните:
                         a(href="#").db.color-default.fzbBig +7 351 #[span.color-green 247 95 31]
-                    .header__top-table-section
+                    .header__top-table-section.header__top-table-section_btn
                         a(href='#popup-login').open-popup-link.db.header__login
                             .header__login-icon: +icon('profile')
                             .header__login-title Вход в личный кабинет
@@ -142,7 +142,7 @@ mixin header(data)
                             li: a(href='#') Как заказать?
                             li: a(href='#') Контакты
                     .header__bottom-table-cell.header__bottom-table-cell_phone.header__bottom-table-cell_fix: a(href="#").db.fzbBig.color-white.fwSemibold +7 351 #[span.color-green 247 95 31]
-                    .header__bottom-table-cell.header__bottom-table-cell_fix: button.btn.btn-green Заказать звонок
+                    .header__bottom-table-cell.header__bottom-table-cell_fix: a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
 
 
                     .header__bottom-table-cell.header__bottom-table-cell_fixNot

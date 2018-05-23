@@ -28,13 +28,13 @@ $(document).click(function(e) {
     }
 });
 
-
 var header = $('.header'),
     headerBottom = $('.header__bottom'),
     headerBottomFix = $('.header__bottom-fix');
 
 window.headerHeight = _heightBlock(header);
 window.headerBottomHeight = _heightBlock(headerBottom);
+// console.log(headerBottomHeight);
 var checkHeaderFix = function(){
     // return false;
 
@@ -45,6 +45,7 @@ var checkHeaderFix = function(){
         }else{
             headerBottom.removeClass('fix');
             headerBottomFix.height(0);
+            window.headerBottomHeight = _heightBlock(headerBottom);
         }
     }
 };

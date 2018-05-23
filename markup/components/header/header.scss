@@ -11,6 +11,9 @@
       &-section{
         display: table-cell;
         vertical-align: bottom;
+        &_btn{
+          width: 166px;
+        }
       }
     }
   }
