@@ -1,0 +1,85 @@
+extends main
+
+block head
+    - var headData = {title: "Оценка квартиры"}
+    link(href='%=static=%css/separate-css/slick.css', rel="stylesheet", type="text/css")
+
+block content
+    .content
+        .container
+            //.hidden-md-down
+                br
+
+            h2 Выберите тип недвижимости:
+
+            .service-tabs-list.not-styleLink
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item.active
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Оценка #[br]Квартиры
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Жилой дома,#[br]коттедж, таун-хаус
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Земельный участок под ИЖС,#[br]включая садовые участки
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Коммерческая#[br]недвижимость
+                .service-tabs-list__section
+                    a(href="#").service-tabs-list__item
+                        span.service-tabs-list__item-table
+                            span.service-tabs-list__item-table-cell Имущественный#[br]комплекс
+
+            br
+            br
+            .row: .col-lg-9.col-md-10.col-xs-12 Оценка недвижимости – наиболее востребованный вид оценочной деятельности компании, необходимый для определения точной и актуальной стоимости объекта. Специалистами-оценщиками, в зависимости от назначения оцениваемого имущества и планируемых операций с ним, могут быть рассчитаны разные виды стоимости, предусмотренные действующим законодательством РФ.
+            br
+            .row
+                .col-lg-8
+
+
+                .col-xl-4
+                    .info-block
+                     .info-block__title Стоимость услуги
+                     .info-block__content
+                         .info-block__table.fwSemibold
+                            .info-block__table-row
+                                .info-block__table-cell Стоимость отчёта
+                                .text-right.info-block__table-cell: span.color-green.nowrap 4 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Дополнительный экземпляр отчета
+                                .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Доставка отчета Заказчику или ипотечному менеджеру
+                                .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Скидка
+                                .text-right.info-block__table-cell: span.color-orange.nowrap 3%
+                            .info-block__table-row
+                                .info-block__table-cell Итоговая стоимость
+                                .text-right.info-block__table-cell: span.color-orange.nowrap 4 500 руб.
+
+
+
+            br
+            br
+
+
+
+
+
+block script
+    script(src='%=static=%js/separate-js/slick.min.js')
+
+
+
+
+
+
+
+
+

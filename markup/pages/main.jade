@@ -44,7 +44,7 @@ html(class="no-js", lang="ru")
 
         +popup()
 
-        a(href='#').button-top
+        a(href='#').button-top.not-styleLink
             .button-top__icon: i.s-arrow-top-circle
             .button-top__title Наверх
 
@@ -54,6 +54,9 @@ html(class="no-js", lang="ru")
         script svg4everybody();
 
         script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+        script(src='%=static=%js/separate-js/inputmask.min.js')
+        script(src='%=static=%js/separate-js/bootstrap-select.min.js')
+        script(src='%=static=%js/separate-js/dropdown.js')
         //- start block script
         block script
         //- end block script

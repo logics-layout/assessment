@@ -40,7 +40,7 @@ mixin header(data)
                         a(href='#').db.color-white.fzbMin #[span.db Выберите город:] #[span.db Челябинск &nbsp;#[i.s-arrow-bottom]]
 
                     .header-mobile__open-marginBottom
-                        a(href='#').db.color-white.fzbMin Звоните:#[br]  #[b.fzbBig +7 351 #[span.color-green 247 95 31]]
+                        a(href='tel:73512479531').db.color-white.fzbMin Звоните:#[br]  #[b.fzbBig +7 351 #[span.color-green 247 95 31]]
                     a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
 
 
@@ -67,14 +67,31 @@ mixin header(data)
                     .header__top-table-section
                         a(href='/').header__logo: +img('assets/header/logo', 'png')
                     .header__top-table-section
-                        span.db Выберите город:
-                        span.db Челябинск &nbsp;#[i.s-arrow-bottom]
+                        span.db Выберите город:
+                        .select-city
+                            select(data-live-search="true").select-text
+                                option Челябинск
+                                option Волгоград
+                                option Воронеж
+                                option Екатеринбург
+                                option Казань
+                                option Краснодар
+                                option Красноярск
+                                option Москва
+                                option Нижний Новгород
+                                option Новосибирск
+                                option Пермь
+                                option Ростов-на-Дону
+                                option Самара
+                                option Санкт-Петербург
+                                option Уфа
+
                     .header__top-table-section
                         span.db Напишите нам:
-                        a(href="#").db.color-default: span.color-default__title.color-default__title_viewBorder ocenka-74@mail.ru
+                        a(href="mailto:ocenka-74@mail.ru").db.color-default: span.color-default__title.color-default__title_viewBorder ocenka-74@mail.ru
                     .header__top-table-section
                         span.db Звоните:
-                        a(href="#").db.color-default.fzbBig +7 351 #[span.color-green 247 95 31]
+                        a(href="tel:73512479531").db.color-default.fzbBig +7 351 #[span.color-green 247 95 31]
                     .header__top-table-section.header__top-table-section_btn
                         a(href='#popup-login').open-popup-link.db.header__login
                             .header__login-icon: +icon('profile')
@@ -141,7 +158,7 @@ mixin header(data)
 
                             li: a(href='#') Как заказать?
                             li: a(href='#') Контакты
-                    .header__bottom-table-cell.header__bottom-table-cell_phone.header__bottom-table-cell_fix: a(href="#").db.fzbBig.color-white.fwSemibold +7 351 #[span.color-green 247 95 31]
+                    .header__bottom-table-cell.header__bottom-table-cell_phone.header__bottom-table-cell_fix: a(href="tel:73512479531").db.fzbBig.color-white.fwSemibold +7 351 #[span.color-green 247 95 31]
                     .header__bottom-table-cell.header__bottom-table-cell_fix: a(href='#callback').open-popup-link.btn.btn-green Заказать звонок
 
 

@@ -1,12 +1,13 @@
   $arrow-bottom-w: 74px 65px -74px -65px 11px 7px 135px 100px 'sprite.png' 's-arrow-bottom-w';
   $arrow-bottom: 89px 65px -89px -65px 11px 7px 135px 100px 'sprite.png' 's-arrow-bottom';
-  $arrow-right: 46px 78px -46px -78px 9px 12px 135px 100px 'sprite.png' 's-arrow-right';
+  $arrow-right: 65px 78px -65px -78px 9px 12px 135px 100px 'sprite.png' 's-arrow-right';
   $arrow-top-circle: 74px 0px -74px 0px 61px 61px 135px 100px 'sprite.png' 's-arrow-top-circle';
   $close: 26px 78px -26px -78px 16px 16px 135px 100px 'sprite.png' 's-close';
   $phone-mobile: 0px 0px 0px 0px 70px 74px 135px 100px 'sprite.png' 's-phone-mobile';
+  $search-g: 46px 78px -46px -78px 15px 15px 135px 100px 'sprite.png' 's-search-g';
   $search: 0px 78px 0px -78px 22px 22px 135px 100px 'sprite.png' 's-search';
 
-  $spritesheet-sprites: ($arrow-bottom-w,$arrow-bottom,$arrow-right,$arrow-top-circle,$close,$phone-mobile,$search,);
+  $spritesheet-sprites: ($arrow-bottom-w,$arrow-bottom,$arrow-right,$arrow-top-circle,$close,$phone-mobile,$search-g,$search,);
 
   @mixin sprite-position($sprite) {
     $sprite-offset-x: nth($sprite, 3);

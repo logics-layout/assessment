@@ -13,6 +13,8 @@ mixin head(data)
     |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
     |<!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
 
+    link(href='%=static=%css/separate-css/bootstrap-select.css', rel="stylesheet", type="text/css")
+
     if data.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")
         meta(property="og:title", content="")

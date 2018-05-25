@@ -52,6 +52,7 @@ svg {
     &__title{
         font-weight: 600;
         color: #46515a;
+        margin-bottom: 0;
         //font-size: 35px;
     }
 }
@@ -238,7 +239,17 @@ svg {
 
 
 .service-list{
-    &__section{
+    .masonry-col2__section{
+        position: relative;
+        &:hover{
+            .service-list__item{
+                transform: translateY(4px);
+            }
+            .service-list__itemGren{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
     &__item{
         display: block;
@@ -249,10 +260,6 @@ svg {
         font-weight: 600;
         font-size: 18px;
         transition: .2s;
-        &:hover{
-            box-shadow: 0 9px 4px rgba(192, 202, 204, 0.2);
-            transform: translateY(-4px);
-        }
         &-table{
             display: table;
             width: 100%;
@@ -274,6 +281,14 @@ svg {
         background-color: #2f9f13;
         color: #fff;
         padding: 27px 39px;
+        position: absolute;
+        left: auto;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: .1s;
+        width: 100%;
+        z-index: 1;
         &-icon{
             margin-bottom: 15px;
 
@@ -964,10 +979,59 @@ svg {
     }
     &__icon{
         margin-bottom: 10px;
+        background: #fff;
+        border-radius: 50%;
     }
 }
 
-
+.info-block{
+    &__title{
+        background-color: #46515a;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 25px 39px;
+        border-bottom: 1px #a9aeb2;
+    }
+    &__content{
+        padding: 10px 39px;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0 5px 4px rgba(192, 202, 204, 0.2);
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 20px;
+            //background-color: #eee;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-image: url('%=static=%general/info-block__content_after.png');
+            background-position: center top;
+            background-repeat: no-repeat;
+            margin-top: -1px;
+        }
+    }
+    &__table{
+        display: table;
+        width: 100%;
+        line-height: 22px;
+        &-row{
+            display: table-row;
+            &+*{
+                .info-block__table-cell{
+                    border-top: 1px solid #dfdfdd;
+                }
+            }
+        }
+        &-cell{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 18px 0;
+        }
+    }
+}
 
 
 

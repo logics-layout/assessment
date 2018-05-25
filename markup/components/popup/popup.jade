@@ -12,7 +12,7 @@ mixin popup(data)
             .form-group
                 button.btn.btn-orange Заказать звонок
 
-            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с #[a(href='/policy') политикой конфиденциальности]
 
         form(id="popup-login" class="popup-main mfp-hide")
 
@@ -23,12 +23,10 @@ mixin popup(data)
                     a(href='#popup-registration').open-popup-link.not-styleLink.color-grey: span.color-grey__title.color-grey__title_viewBorder.popup-main__titleLink.color-grey__title_dashed Регистрация
             br
 
-            .form-group
-                input.form-control(placeholder='Введите ваше Ф.И.О.')
             .form-group.form-group__required
                 input.form-control(placeholder='Адрес эл. почты')
             .form-group.form-group__required
-                input.form-control(placeholder='Укажите номер вашего телефона', type='tel')
+                input.form-control(placeholder='Укажите пароль')
 
             .form-group
                 button.btn.btn-orange.btn-width Войти в личный кабинет
@@ -41,7 +39,7 @@ mixin popup(data)
                 .popup-main__titleTable-cell
                     span.popup-main__title Регистрация
                 .popup-main__titleTable-cell
-                    a(href='popup-login').open-popup-link.not-styleLink.color-grey: span.color-grey__title.color-grey__title_viewBorder.popup-main__titleLink.color-grey__title_dashed Авторизация
+                    a(href='#popup-login').open-popup-link.not-styleLink.color-grey: span.color-grey__title.color-grey__title_viewBorder.popup-main__titleLink.color-grey__title_dashed Авторизация
             br
 
             .form-group
@@ -54,5 +52,5 @@ mixin popup(data)
             .form-group
                 button.btn.btn-orange.btn-width Зарегистрироваться
 
-            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+            small.color-grey Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с #[a(href='/policy') политикой конфиденциальности]
 

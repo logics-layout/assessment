@@ -1,6 +1,5 @@
-$('[href="#"]').click(function (e) {
-    e.preventDefault();
-});
+$('[href="#"]').click(function (e) {e.preventDefault();});
+$('[type="tel"]').inputmask('+7(999)999-99-99');
 
 var linkTop = $('.button-top');
 linkTop.click(function () {
@@ -63,6 +62,12 @@ $('.header-mobile__open-nav a').click(function(e){
     }
 
 });
+if($.fn.selectpicker){
+    $('select').selectpicker({
+        style: '',
+        size: 7
+    }).selectpicker('setStyle', 'btn', 'remove');
+}
 
 if ($.fn.magnificPopup) {
     var magnificPopupObj = {
@@ -236,13 +241,13 @@ if($.fn.slick){
     $('.slider-main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 300,
+        autoplay: true,
         dots: true,
         arrows: true,
         prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-left' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-left'></use></svg></button>",
         nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-right' width='20' height='20'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-right'></use></svg></button>",
     });
-    
-    
 }
 
 
