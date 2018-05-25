@@ -149,6 +149,7 @@ svg {
                 background-color: #fff;
                 box-shadow: 0 43px 57px rgba(0, 0, 0, 0.17);
                 padding: 40px 48px;
+                padding-right: 70px;
             }
         }
         &-map{
@@ -239,16 +240,19 @@ svg {
 
 
 .service-list{
-    .masonry-col2__section{
+    &__section{
         position: relative;
         &:hover{
             .service-list__item{
-                transform: translateY(4px);
+                //transform: translateY(4px);
+                display: none;
             }
             .service-list__itemGren{
-                visibility: visible;
-                opacity: 1;
+                display: block;
             }
+        }
+        +*{
+            margin-top: 30px;
         }
     }
     &__item{
@@ -281,14 +285,9 @@ svg {
         background-color: #2f9f13;
         color: #fff;
         padding: 27px 39px;
-        position: absolute;
-        left: auto;
-        top: 0;
-        visibility: hidden;
-        opacity: 0;
-        transition: .1s;
-        width: 100%;
-        z-index: 1;
+        display: none;
+        box-shadow: 0 5px 4px rgba(192, 202, 204, 0.2);
+        overflow: hidden;
         &-icon{
             margin-bottom: 15px;
 
@@ -911,6 +910,8 @@ svg {
                 font-size: 18px;
                 font-weight: 600;
                 display: block;
+                margin-bottom: 10px;
+                padding: 0 5px;
             }
             &__titleSub{
                 font-size: 14px;
@@ -997,12 +998,12 @@ svg {
         padding: 10px 39px;
         background-color: #fff;
         position: relative;
-        box-shadow: 0 5px 4px rgba(192, 202, 204, 0.2);
+        box-shadow: 0 12px 21px rgba(192, 202, 204, 0.2);
         &:after{
             content: '';
             display: block;
             width: 100%;
-            height: 20px;
+            height: 40px;
             //background-color: #eee;
             position: absolute;
             top: 100%;
@@ -1010,6 +1011,7 @@ svg {
             background-image: url('%=static=%general/info-block__content_after.png');
             background-position: center top;
             background-repeat: no-repeat;
+            background-size: 100%;
             margin-top: -1px;
         }
     }
@@ -1028,15 +1030,112 @@ svg {
         &-cell{
             display: table-cell;
             vertical-align: middle;
-            padding: 18px 0;
+            padding: 24px 0;
+            +*{
+                padding-left: 10px;
+            }
         }
     }
 }
 
+.order-accordion{
+    background-color: #fff;
+    box-shadow: 0 5px 4px rgba(192, 202, 204, 0.4);
+    +*{
+        margin-top: 27px;
+    }
+    &__header{
+        padding: 24.5px 40px;
+        position: relative;
+        padding-right: 62px;
+        &-title{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &-icon{
+            position: absolute;
+            right: 42px;
+            top: 50%;
+            margin-top: -13px;
+            i{
+                transition: .2s;
+            }
+        }
+    }
+    &__content{
+        padding: 33px 40px;
+        border-top: 1px solid #dfdfdd;
+        display: none;
+    }
+    &.active{
+        .order-accordion__header{
+            .order-accordion__header-icon{
+                i{
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        .order-accordion__content{
+            display: block;
+        }
+    }
+}
 
+.listOrder-accordion{
 
+}
 
+.toggle-inputs{
+    box-shadow: 0 5px 4px rgba(192, 202, 204, 0.2);
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 25px;
+    font-size: 0;
+    >*{
+        display: inline-block;
+        vertical-align: top;
+    }
+    label{
+        margin: 0;
+    }
+    &__left{
+        .toggle-inputs__el{
+            border-radius: 25px 0 0 25px;
+            border: 1px solid #d3dddf;
+            border-right: none;
+        }
+    }
+    &__right{
+        .toggle-inputs__el{
+            border-radius: 0 25px 25px 0;
+            border: 1px solid #d3dddf;
+            border-left: none;
+        }
+    }
+    &__input{
+        display: none;
+        &:checked{
+            +*{
+                background-color: #2f9f13;
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+    }
+    &__el{
+        font-size: 14px;
+        color: #868c91;
+        padding: 6px 12px;
+        display: block;
+        width: 47px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
 
+.checkbox-style{
+
+}
 
 
 

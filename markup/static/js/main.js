@@ -130,6 +130,34 @@ if ($.fn.masonry) {
 
 }
 
+
+// var serviceListItem = '.service-list__item',
+//     itemGren = '.service-list__itemGren';
+//
+// $('.service-list__section').hover(function () {
+//     var _this = $(this),
+//         serviceListItemEL = _this.find(serviceListItem),
+//         itemGrenEl = _this.find(itemGren);
+//
+//     var serviceListItemH = _heightBlock(serviceListItemEL);
+//     var itemGrenElH = _heightBlock(itemGrenEl);
+//
+//     serviceListItemEL.hide();
+//     itemGrenEl.css('height', serviceListItemH+"px");
+//     itemGrenEl.show();
+//     itemGrenEl.animate({
+//         'height': itemGrenElH+"px"
+//     }, 300);
+//
+// }, function () {
+//     var _this = $(this),
+//         serviceListItemEL = _this.find(serviceListItem),
+//         itemGrenEl = _this.find(itemGren);
+//
+//     serviceListItemEL.show();
+//     itemGrenEl.hide();
+// });
+
 $('.accordion__item-link').click(function(e){
     var _this = $(this),
        parent = _this.parent(),
@@ -175,7 +203,7 @@ if($.fn.slick){
                     }
                 },
                 {
-                    breakpoint: 452,
+                    breakpoint: 500,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -209,7 +237,7 @@ if($.fn.slick){
                 }
             },
             {
-                breakpoint: 452,
+                breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -227,7 +255,7 @@ if($.fn.slick){
         asNavFor: '.team__cnt-slider',
         responsive: [
             {
-                breakpoint: 452,
+                breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

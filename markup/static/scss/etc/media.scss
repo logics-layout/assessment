@@ -164,9 +164,34 @@ body, html{
     }
   }
 
+  .order-accordion {
+    &__header {
+      padding-left: 20px;
+      padding-right: 40px;
+      &-icon {
+        right: 20px;
+      }
+    }
+    &__content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .info-block__content{
+    padding: 0;
+  }
+  .info-block__title, .info-block__content{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+
+  .service-list__itemGren{
+    display: none !important;
+  }
   .phone-mobile{
     position: fixed;
     bottom: 95px;
@@ -425,6 +450,12 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .block-input {
+    padding-left: 26px;
+  }
+  .listOrder-accordion, .info-block{
+    margin: 0 -15px;
+  }
   .slider-main {
     &__title {
       font-size: 24px;
@@ -652,6 +683,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .file-upload{
+    display: block;
+    &__row{
+      display: block;
+    }
+    &__cell{
+      display: block;
+    }
+  }
   .list-advantagesBg {
     &__list {
       margin: -15px !important;

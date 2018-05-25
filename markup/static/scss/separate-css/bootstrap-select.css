@@ -31,8 +31,6 @@ select.selectpicker {
     color: #a7a7a7;
     border: 2px solid #cacaca;
     height: 34px;
-    font-family: 'Museo Sans Cyrl', sans-serif;
-    font-weight: 100;
     outline: none;
     font-style: italic;
 }

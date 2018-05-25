@@ -183,10 +183,34 @@
       }
       &-item{
         color: $colorAuto;
+        &:hover{
+          .header__nav-list-item-icon{
+            >span{
+              opacity: 1;
+            }
+          }
+        }
         &-icon{
           text-align: center;
+          width: 30px;
+          background-size: 100% auto;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
           svg{
             margin-top: -4px;
+          }
+          >span{
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #46515a;
+            opacity: 0;
           }
         }
         &-title{

@@ -1,4 +1,5 @@
 extends main
+include ../components/service/service
 
 block head
     - var headData = {title: "Услуги компании"}
@@ -9,163 +10,9 @@ block content
             .hidden-md-down
                 br
                 br
-            .row
-                .col-lg-8
-                    .service-list.not-styleLink.masonry-col2
-                        .grid-sizer
-                        .gutter-sizer
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/1', 'png')
-                                        span.service-list__item-title Оценка #[br] недвижимости
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/1-w', 'png')
-                                .service-list__itemGren-title Оценка недвижимости
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/2', 'png')
-                                        span.service-list__item-title Оценка бизнеса
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/2-w', 'png')
-                                .service-list__itemGren-title Оценка бизнеса
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/4', 'png')
-                                        span.service-list__item-title Оценка #[br]движимого имущества
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/4-w', 'png')
-                                .service-list__itemGren-title Оценка движимого имущества
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/3', 'png')
-                                        span.service-list__item-title Оспаривание #[br]кадастровой стоимости
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/3-w', 'png')
-                                .service-list__itemGren-title Оценка движимого имущества
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/6', 'png')
-                                        span.service-list__item-title Судебная экспертиза
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/6-w', 'png')
-                                .service-list__itemGren-title Судебная экспертиза
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/5', 'png')
-                                        span.service-list__item-title Независимая автоэкспертиза после ДТП
-
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/5-w', 'png')
-                                .service-list__itemGren-title Независимая автоэкспертиза после ДТП
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/7', 'png')
-                                        span.service-list__item-title Консалтинг в сфере недвижимости
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/7-w', 'png')
-                                .service-list__itemGren-title Консалтинг в сфере недвижимости
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                        .masonry-col2__section.col-1
-                            a(href='#').service-list__item
-                                span.service-list__item-table
-                                    span.service-list__item-table-cell
-                                        span.service-list__item-icon: +img('content/service-list/8', 'png')
-                                        span.service-list__item-title Оценка ущерба имуществу
-
-                            .service-list__itemGren
-                                .service-list__itemGren-icon: +img('content/service-list/8-w', 'png')
-                                .service-list__itemGren-title Оценка ущерба имуществу
-                                a(href='#').service-list__itemGren-link: span Автотранспорта и спецтехники
-                                a(href='#').service-list__itemGren-link: span Производственного оборудования
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-                                a(href='#').service-list__itemGren-link: span Прочее имущество
-
-                .col-lg-4
-                    .nav-list
-                        .nav-list__title Заказать отчёт об оценке
-                        ul.nav-list__list.not-styleLink
-                            li: a(href="#").nav-list__list-item
-                                span.nav-list__list-item-table
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-icon: +icon('Apartment')
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-title Квартира
-                            li: a(href="#").nav-list__list-item
-                                span.nav-list__list-item-table
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-icon: +icon('Residential-building')
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-title Жилой дом
-                            li: a(href="#").nav-list__list-item
-                                span.nav-list__list-item-table
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-icon: +icon('Land-plot')
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-title Земельный участок
-                            li: a(href="#").nav-list__list-item
-                                span.nav-list__list-item-table
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-icon: +icon('more')
-                                    span.nav-list__list-item-table-cell
-                                        span.nav-list__list-item-title Другое
-
-
+            +service()
             br
             br
-
-
-
-
 
 
     .form-callback.form-callback_white
@@ -190,7 +37,7 @@ block content
                             .col-lg-8.col-xs-12.col-md-6
                                 button.btn.btn-orange.btn-width Оставить заявку
 
-            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+            span Отправляя данные, вы даете согласие на обработку персональных данных в соответствии с #[a(href='/policy') политикой конфиденциальности]
 
 
 

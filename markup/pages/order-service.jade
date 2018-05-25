@@ -38,11 +38,296 @@ block content
             br
             .row: .col-lg-9.col-md-10.col-xs-12 Оценка недвижимости – наиболее востребованный вид оценочной деятельности компании, необходимый для определения точной и актуальной стоимости объекта. Специалистами-оценщиками, в зависимости от назначения оцениваемого имущества и планируемых операций с ним, могут быть рассчитаны разные виды стоимости, предусмотренные действующим законодательством РФ.
             br
+            .hidden-lg-up
+                .info-block
+                    .info-block__title Стоимость услуги
+                    .info-block__content
+                        .info-block__table.fwSemibold
+                            .info-block__table-row
+                                .info-block__table-cell Стоимость отчёта
+                                .text-right.info-block__table-cell: span.color-green.nowrap 4 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Дополнительный экземпляр отчета
+                                .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Доставка отчета Заказчику или ипотечному менеджеру
+                                .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
+                            .info-block__table-row
+                                .info-block__table-cell Скидка
+                                .text-right.info-block__table-cell: span.color-orange.nowrap 3%
+                            .info-block__table-row
+                                .info-block__table-cell Итоговая стоимость
+                                .text-right.info-block__table-cell: span.color-orange.nowrap 4 500 руб.
+                br
+                br
             .row
-                .col-lg-8
+                .col-lg-8.col-xs-12
+
+                    .listOrder-accordion
+                        .order-accordion.active
+                            .order-accordion__header
+                                span.order-accordion__header-title #[span.color-green Шаг 1.] Местоположение и площадь объекта оценки
+                                span.order-accordion__header-icon: i.s-arrow-bottom_green
+
+                            .order-accordion__content
+                                .row
+                                    .col-lg-5
+                                        .form-group
+                                            label.form-label Город #[span.color-red *]
+                                            input.form-control()
+                                        .form-group
+                                            label.form-label Расстояние до МКАД #[span.color-red *]
+                                            input.form-control()
+                                    .col-lg-5
+                                        .form-group
+                                            label.form-label Адрес #[span.color-red *]
+                                            input.form-control()
+                                    .col-lg-2
+                                        .form-group
+                                            label.form-label Площадь #[span.color-red *]
+                                            input.form-control()
+                                button.btn.btn-green.fwSemibold Перейти к следующему шагу
+                        .order-accordion.active
+                            .order-accordion__header
+                                span.order-accordion__header-title #[span.color-green Шаг 2.] Цель оценки
+                                span.order-accordion__header-icon: i.s-arrow-bottom_green
+
+                            .order-accordion__content
+                                .row
+                                    .col-lg-5
+                                        .form-group
+                                            label.form-label Оценка для банка
+                                            br
+                                            .toggle-inputs
+                                                label.toggle-inputs__left
+                                                    input(type='radio', name='a', value='1', checked).toggle-inputs__input
+                                                    span.toggle-inputs__el Да
+
+                                                label.toggle-inputs__right
+                                                    input(type='radio', name='a', value='2').toggle-inputs__input
+                                                    span.toggle-inputs__el Нет
+
+                                    .col-lg-5
+                                        .form-group
+                                            label.form-label Выберите банк и списка
+                                            select
+                                                option Газпромбанк
+                                                option item 1
+                                                option item 2
+                                                option item 3
+
+                                button.btn.btn-green.fwSemibold Перейти к следующему шагу
+
+                        .order-accordion.active
+                            .order-accordion__header
+                                span.order-accordion__header-title #[span.color-green Шаг 3.] Дополнительные услуги
+                                span.order-accordion__header-icon: i.s-arrow-bottom_green
+
+                            .order-accordion__content
+                                .form-group
+                                    label.table-label
+                                        .table-label__cell
+                                            .checkbox-style
+                                                input(type='checkbox').checkbox-style__input
+                                                span.checkbox-style__el
+                                        .table-label__cell
+                                            p.db.color-default.fwSemibold Дополнительный экземпляр отчета &nbsp;#[span.color-greyW +500 р.]
+                                            small.color-greyW «В стандартную цену услуги входит 1 экземпляр и выписка из отчета (или 2 полных экземпляра отчета в соответствии с требованиями банков и регистрирующих органов при регистрации ипотечных сделок). Данная услуга означает предоставление дополнительного экземпляра Отчета об оценке, который не является обязательным для тех целей, для которых эта оценка производится. Этот экземпляр остается у Заказчика и не подлежит обязательной передаче в банк (суд, МФЦ, органы опеки и т.п.)
+                                .form-group
+                                    label.table-label
+                                        .table-label__cell
+                                            .checkbox-style
+                                                input(type='checkbox').checkbox-style__input
+                                                span.checkbox-style__el
+                                        .table-label__cell
+                                            span.db.color-default.fwSemibold Доставка отчета Заказчику или ипотечному менеджеру
+
+                                .row: .col-lg-9: .row
+                                    .col-lg-6
+                                        .form-group
+                                            label.form-label Введите Ф.И.О.
+                                            input.form-control(placeholder='Как к вам обращаться?')
+                                        .form-group
+                                            label.form-label Номер телефона #[span.color-red *]
+                                            input.form-control(placeholder='Введите номер телефона')
+                                    .col-lg-6
+                                        .form-group
+                                            label.form-label Адрес #[span.color-red *]
+                                            input.form-control(placeholder='Как к вам обращаться?')
 
 
-                .col-xl-4
+                                a(href='#').not-styleLink.color-green.fzbMin.fwSemibold: span.color-green__title.color-green__title_viewBorder.color-green__title_dashed Указать дополнительный адрес
+                                br
+                                br
+                                .form-group
+                                    label.table-label
+                                        .table-label__cell
+                                            .checkbox-style
+                                                input(type='checkbox').checkbox-style__input
+                                                span.checkbox-style__el
+                                        .table-label__cell
+                                            p.db.color-default.fwSemibold Срочное (приоритетное) выполнение в течение 24 часов &nbsp;#[span.color-greyW +1 000 р.]
+                                .form-group
+                                    label.table-label
+                                        .table-label__cell
+                                            .checkbox-style
+                                                input(type='checkbox').checkbox-style__input
+                                                span.checkbox-style__el
+                                        .table-label__cell
+                                            p.db.color-default.fwSemibold Заказ выписки из ЕГРН об основных характеристиках объекта недвижимости
+
+                                .block-input
+                                    .block-input__content
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default В электронной форме
+                                                    small (с ЭЦП сотрудника Росреестра, срок предоставления – 1 рабочий день)
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default На бумажном носителе
+                                                    small (оригинал, передается одновременно с отчетом об оценке, срок получения 5-7 рабочих дней)
+                                button.btn.btn-green.fwSemibold Перейти к следующему шагу
+
+                        .order-accordion.active
+                            .order-accordion__header
+                                span.order-accordion__header-title #[span.color-green Шаг 4.] Получите скидку
+                                span.order-accordion__header-icon: i.s-arrow-bottom_green
+
+                            .order-accordion__content.page-content
+                                ul
+                                    li
+                                        p.fwSemibold Просто зарегистрируйтесь на сайте и получите скидку 2% на первый заказ
+                                        a(href='#').not-styleLink.color-green.fzbMin.fwSemibold: span.color-green__title.color-green__title_viewBorder.color-green__title_dashed Зарегистрироваться
+                                    li
+                                        p.fwSemibold Загрузите документы, необходимые для проведения оценки, #[br]и получите дополнительную скидку 3%
+
+                                        .file-upload
+                                            .file-upload__row
+                                                .file-upload__cell: span.color-green.fwSemibold 1.
+                                                .file-upload__cell.fzbMin Название документа
+                                                .file-upload__cell.fzbMin.fwSemibold: a(href='#').not-styleLink.color-green.fzbMin: span.color-green__title.color-green__title_viewBorder.color-green__title_dashed Прикрепить документ
+                                            .file-upload__row
+                                                .file-upload__cell: span.color-green.fwSemibold 2.
+                                                .file-upload__cell.fzbMin Название документа
+                                                .file-upload__cell.fzbMin.fwSemibold: a(href='#').not-styleLink.color-green.fzbMin: span.color-green__title.color-green__title_viewBorder.color-green__title_dashed Прикрепить документ
+                                            .file-upload__row
+                                                .file-upload__cell: span.color-green.fwSemibold 3.
+                                                .file-upload__cell.fzbMin Название документа
+                                                .file-upload__cell.fzbMin.fwSemibold: a(href='#').not-styleLink.color-green.fzbMin: span.color-green__title.color-green__title_viewBorder.color-green__title_dashed Прикрепить документ
+                                    li
+                                        p.fwSemibold Сделайте фотографии самостоятельно и получите дополнительную скидку
+
+                                .block-input
+                                    .block-input__content
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Да, я хочу сделать фото самостоятельно по стандартам ООО #[br]«Первая оценочная компания» с использованием мобильного #[br]приложения (ссылки на приложение на google play и app store) / в #[br]соответствии с инструкциями
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Нет, я хочу, чтобы оценщик приехал на объект сам и сделал все правильно!
+                                                    small (специалист свяжется с Вами и согласует дату и время осмотра)
+
+                                ul
+                                    li
+                                        p.fwSemibold Оплатите онлайн сейчас и получите дополнительную скидку 3% на всю сумму заказа
+
+                                .block-input
+                                    .block-input__content
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Картой на сайте (скидка 3%)
+
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Картой позднее
+                                                    small (на вашу почту будет отправлен счет на оплату банковской картой через платежный шлюз ПАО Сбербанк, #[br] который вы сможете оплатить, когда вам это будет удобно, счет действителен в течение суток с момента его формирования).
+
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Наличными на осмотре
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Оплата по реквизитам на расчетный счет #[br]ООО «Первая оценочная компания» (формирование счета на оплату)
+                                        .form-group
+                                            label.table-label
+                                                .table-label__cell
+                                                    .checkbox-style
+                                                        input(type='checkbox').checkbox-style__input
+                                                        span.checkbox-style__el
+                                                .table-label__cell
+                                                    span.db.color-default Выберу способ оплаты после получения дополнительной #[br]консультации и подтверждения заказа
+                                br
+                                button.btn.btn-green.fwSemibold Перейти к следующему шагу
+
+                        .order-accordion.active
+                            .order-accordion__header
+                                span.order-accordion__header-title #[span.color-green Шаг 5.] Информация о заказчике
+                                span.order-accordion__header-icon: i.s-arrow-bottom_green
+
+                            .order-accordion__content
+                                .row: .col-lg-10
+                                    .row
+                                        .col-lg-6
+                                            .form-group
+                                                label.form-label Введите Ф.И.О.
+                                                input.form-control(placeholder="Как к вам обращаться?")
+                                            .form-group
+                                                label.form-label Номер телефона #[span.color-red *]
+                                                input.form-control(placeholder='Введите номер телефона')
+                                        .col-lg-6
+                                            .form-group
+                                                label.form-label Адрес #[span.color-red *]
+                                                input.form-control(placeholder='Введите название улицы / дом / кв')
+                                            .form-group
+                                                label.form-label Эл. почта
+                                                input.form-control(placeholder='Укажите адрес эл. почты')
+                                br
+                                .row: .col-lg-10
+                                    .row
+                                        .col-lg-6
+                                            button.btn.btn-orange.fwSemibold.btn-width Заказать отчёт
+
+                .col-lg-4.col-xs-12.hidden-md-down
                     .info-block
                      .info-block__title Стоимость услуги
                      .info-block__content
@@ -51,10 +336,10 @@ block content
                                 .info-block__table-cell Стоимость отчёта
                                 .text-right.info-block__table-cell: span.color-green.nowrap 4 500 руб.
                             .info-block__table-row
-                                .info-block__table-cell Дополнительный экземпляр отчета
+                                .info-block__table-cell Дополнительный экземпляр отчета
                                 .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
                             .info-block__table-row
-                                .info-block__table-cell Доставка отчета Заказчику или ипотечному менеджеру
+                                .info-block__table-cell Доставка отчета Заказчику или ипотечному менеджеру
                                 .text-right.info-block__table-cell: span.color-green.nowrap 500 руб.
                             .info-block__table-row
                                 .info-block__table-cell Скидка
